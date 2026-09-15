@@ -4,7 +4,7 @@ Obsidian vault for NYU Tandon's *Systems Integration: From ERP to Agentic AI*. E
 
 Open this folder as an Obsidian vault and start at **[[index]]** — it's the home note with links to every piece of course material and every capstone deliverable.
 
-If you're reading this on GitHub instead: see [`index.md`](index.md) for the same navigation, or browse the folders — `w0`–`w3` are weekly course materials, `Syllabus and Rubrics/` and `Final Project Info/` are course-wide references, and `project/` holds the Sweetgreen capstone work.
+If you're reading this on GitHub instead: see [`index.md`](index.md) for the same navigation, or browse the folders — `w0`–`w3` are weekly course materials, `Syllabus and Rubrics/` and `Final Project Info/` are course-wide references, and `project/` holds the Sweetgreen capstone work. TBD.
 
 See `CLAUDE.md` for how this vault is organized and maintained (for anyone — human or AI — picking up work here).
 
