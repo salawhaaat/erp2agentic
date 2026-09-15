@@ -15,11 +15,13 @@ Obsidian vault for the course. All course PDFs are mirrored as Markdown notes (s
 
 ## Sweetgreen capstone deliverables
 
+All Sweetgreen deliverables live in the `project/` folder so the capstone work is in one place, separate from the week-by-week course materials.
+
 | Deliverable | Due | Note |
 |---|---|---|
-| Backbone-context note | Week 2 | [[w1/Backbone-Context-Note-Sweetgreen]] |
-| Context-and-diagnosis brief | Week 3 | [[w2/Context-and-Diagnosis-Brief-Sweetgreen]] |
-| Lab 1 pre-work (reality brief) | Before Week 3 lab | [[w3/Lab1-Prework-Sweetgreen]] |
+| Backbone-context note | Week 2 | [[project/Backbone-Context-Note-Sweetgreen]] |
+| Context-and-diagnosis brief | Week 3 | [[project/Context-and-Diagnosis-Brief-Sweetgreen]] |
+| Lab 1 pre-work (reality brief) | Before Week 3 lab | [[project/Lab1-Prework-Sweetgreen]] |
 
 These three build on each other: the backbone-context note seeds the diagnosis brief, which seeds the Lab 1 pre-work, which feeds Board Memo §2/§3 and storyboard slides S1/S3/S4/S5.
 
@@ -31,5 +33,5 @@ These three build on each other: the backbone-context note seeds the diagnosis b
 - [x] Draft Lab 1 pre-work / reality brief (Sweetgreen)
 - [ ] Send Week 1 + Week 2 notes to the professor by email before the Sep 18 lab (`ec5743@nyu.edu`)
 - [ ] Set up/confirm free accounts: Miro or Lucidchart, Airtable or Google Sheets + Gemini
-- [ ] Optional stretch: sketch the process map at home (control/decision points) and draft the friction chain before class — see [[w3/Lab1-Prework-Sweetgreen]] §3 for a first draft to refine
+- [ ] Optional stretch: sketch the process map at home (control/decision points) and draft the friction chain before class — see [[project/Lab1-Prework-Sweetgreen]] §3 for a first draft to refine
 - [ ] Team stack path declared by end of Week 3

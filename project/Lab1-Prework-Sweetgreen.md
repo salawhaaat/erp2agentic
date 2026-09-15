@@ -32,25 +32,43 @@ Sweetgreen is a fast-casual restaurant company (large multi-unit, vertical/food-
 3. **Traditional line vs. Infinite Kitchen inconsistency** — the same order type may be handled differently depending on which kitchen format it lands on.
 
 **Flow to map in class (Order-to-Cash):**
-```
-Customer places order (app / web / kiosk / 3rd-party)
-   ↓
-Payment authorized                              ★ control point
-   ↓
-Order enters restaurant order-management system
-   ↓
-Kitchen receives order — traditional line OR Infinite Kitchen   ◆ decision point (format + capacity/availability check)
-   ↓
-Meal prepared
-   ↓
-Order verified and packed
-   ↓
-Pickup or delivery
-   ↓         ↩ rejection/rework path: item unavailable / wrong customization →
-Transaction completed                            back to "meal prepared" for a remake
+
+```mermaid
+flowchart TD
+    A["Customer places order\n(app / web / kiosk / 3rd-party)"] --> B
+    B(["★ Payment authorized\ncontrol point — order record born"]):::control --> C["Order enters restaurant\norder-management system"]
+    C --> D{"◆ Kitchen routing:\ntraditional line or Infinite Kitchen?\nstock/customization confirmed?"}:::decision
+    D -->|capacity + stock OK| E["Meal prepared"]
+    D -->|item unavailable / overloaded| X["Exception raised"]:::reject
+    E --> F["Order verified and packed"]
+    F -->|fails verification| X
+    X -.->|"↩ rejection / rework path"| E
+    F -->|passes verification| G["Pickup or delivery"]
+    G --> H(["Transaction completed\nrevenue recorded"]):::control
+
+    classDef control fill:#2f6f4f,stroke:#1d4d34,color:#fff
+    classDef decision fill:#a8721f,stroke:#7a5216,color:#fff
+    classDef reject fill:#8b2f2f,stroke:#611f1f,color:#fff
 ```
 
+- **★ control point** (green) = payment authorization and transaction completion — where a committed, owned fact is born.
+- **◆ decision point** (amber) = kitchen-format/availability routing — where the process forks.
+- **↩ rejection/rework path** (red, dashed) = failed verification loops back to prep for a remake.
+
 **Rough friction chain (written before consulting the pattern library, per the sequence rule):**
+
+```mermaid
+flowchart LR
+    A["Digital order accepted\nwithout a live capacity/\navailability check"] --> B["Kitchen receives more\ncustomized volume than\nit can confirm in the moment"]
+    B --> C["Item unavailable or\nmisassembled"]
+    C --> D["Customer receives a wrong\nor incomplete order"]
+    D --> E["Remake or refund issued"]
+    E --> F["Wasted ingredients, packaging,\nlabor + delayed handoff for\nthe customer waiting behind it"]
+
+    style A fill:#a8721f,stroke:#7a5216,color:#fff
+    style F fill:#8b2f2f,stroke:#611f1f,color:#fff
+```
+
 > Digital order accepted without a live capacity/availability check → kitchen receives more customized volume than it can confirm at that moment → an item is unavailable or misassembled → customer receives a wrong/incomplete order → remake or refund issued → wasted ingredients, packaging, and labor, plus a delayed handoff for the customer waiting behind it.
 
 **First read — functional vs. technical requirements:**
