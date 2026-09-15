@@ -1,5 +1,6 @@
-Title    Start Date
-Week 3 is Lab 1 — bring (and share) your diagnosis
+
+
+### Week 3 is Lab 1 — bring (and share) your diagnosis
 Sep 11, 2026 7:29 PM
 Hi everyone,
 
@@ -23,7 +24,7 @@ Professor Emanuele Cimica
 
 ec5743@nyu.edu
 
-Great start today — your Week 2 reading and what we'll build
+### Great start today — your Week 2 reading and what we'll build
 Sep 3, 2026 6:14 PM
 Hi everyone,
 
@@ -50,7 +51,7 @@ Best,
 Professor Emanuele Cimica
 ec5743@nyu.edu
 
-The backbone every company runs on — your Week 1 read is live
+### The backbone every company runs on — your Week 1 read is live
 Aug 26, 2026 4:14 AM
 Hi everyone,
 
@@ -76,7 +77,7 @@ Best,
 Professor Emanuele Cimica
 ec5743@nyu.edu
 
-Welcome to IE-GY 9113B — see you September 4
+### Welcome to IE-GY 9113B — see you September 4
 Aug 21, 2026 3:36 AM
 Hi everyone,
 
