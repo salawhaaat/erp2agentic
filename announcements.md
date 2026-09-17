@@ -1,5 +1,4 @@
 
-
 ### Week 3 is Lab 1 — bring (and share) your diagnosis
 Sep 11, 2026 7:29 PM
 Hi everyone,
