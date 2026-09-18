@@ -102,3 +102,7 @@ flowchart TD
 Presentation-ready version with control-point IDs (CP1–CP6), decision labels (D1–D3), and the friction chain overlaid, generated before the curveball was absorbed into the mermaid source above. Control points and decisions map onto the tables in [[Lab1-Process-Map-Sweetgreen]].
 
 ![[Order-and-Payment-Process-Map-Annotated.png]]
+
+A diagram-only crop (no side panel of CP/D reference text) is at `assets/Order-and-Payment-Process-Map-Diagram-Only.png` — this is the version used on slide S5 of `project/Board-Presentation-Sweetgreen.pptx`, since the full annotated page's reference text is illegible at slide scale and duplicates the tables above.
+
+![[Order-and-Payment-Process-Map-Diagram-Only.png]]
