@@ -33,7 +33,7 @@ Apply these to any note you add or edit.
   Use `[!example]-`, `[!info]-`, `[!note]-`, or `[!quote]-` as fits. The trailing `-` collapses it by default (`+` would default-expand). Never fold core teaching content, due dates, or homework instructions, only supplementary material.
 - **Wikilinks:** use bare `[[Note Name]]` or `[[Note Name|display text]]`. Obsidian resolves by filename across the whole vault regardless of folder, so links don't need full paths and survive files being moved between folders.
 - **Diagrams:** Mermaid renders natively in Obsidian and on GitHub. Use `flowchart` diagrams for process maps, and mark control points and decision points explicitly when diagramming a business process. That's this course's own vocabulary; see [[w0/W0_ERPFloor_Course Primer]] and [[w1/W01_IntegrationBackbone_StudyNote_PB14]].
-- **No PDFs in this vault.** Every source PDF gets converted to Markdown and the original deleted. If a new PDF shows up, say a new week's study note from Brightspace, convert it (`markitdown`) and delete the PDF rather than keeping both.
+- **No source PDFs in this vault.** Every source PDF (course material from Brightspace, a downloaded article, etc.) gets converted to Markdown and the original deleted. If a new one shows up, convert it (`markitdown`) and delete the PDF rather than keeping both. **Exception:** a generated PDF export of a deck this vault already tracks as `.pptx` (e.g. `Lab1-Presentation-Sweetgreen.pdf` next to `Lab1-Presentation-Sweetgreen.pptx`) is fine to keep, it's a presentable copy of a file already under version control, not an unconverted source.
 
 ## Writing style
 

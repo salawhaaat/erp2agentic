@@ -91,3 +91,4 @@ Per [[W3_Lab1_Lecture-Notes]], what gets presented today is slide S5 (Backbone d
 | Annotated map (★◆ + rejection path + 3 points + chain) | Done | [[diagrams/Order-and-Payment-Process-Map]], plus the presentation-ready annotated image at `project/diagrams/assets/Order-and-Payment-Process-Map-Annotated.png` |
 | One-page diagnosis (chain, consequence, prize) | Done | This note, §"Friction chain and board-level consequence" above |
 | Board deck, slide S5 filled in | Done | `project/Board-Presentation-Sweetgreen.pptx` — the annotated map and one-line consequence dropped into the official `IE-GY_9113B_Board_Presentation_Template.pptx`'s S5 (Backbone diagnosis) slide; every other slide stays a placeholder for later weeks |
+| Standalone Lab 1 presentation (map, curveball, data, consequence) | Done | `project/Lab1-Presentation-Sweetgreen.pptx` / `.pdf` — a self-contained 5-slide deck for the in-class 6-minute share-out, separate from the semester-long board deck above |

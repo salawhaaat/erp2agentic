@@ -42,6 +42,7 @@ flowchart LR
 | Lab 1 pre-work (reality brief) | Before Week 3 lab | [[project/Lab1-Prework-Sweetgreen]] |
 | Lab 1 process map, curveball, and data sandbox | Week 3 lab | [[project/Lab1-Process-Map-Sweetgreen]] |
 | Board presentation deck (living, filled in lab by lab) | Ongoing | `project/Board-Presentation-Sweetgreen.pptx` |
+| Lab 1 presentation (standalone, to present in class) | Week 3 lab | `project/Lab1-Presentation-Sweetgreen.pptx` / `.pdf` |
 | Breakout scratch notes | Ongoing | [[project/Agentic AI Project]] |
 | Public research log | Ongoing | [[project/research/Sweetgreen-Public-Research]] |
 
