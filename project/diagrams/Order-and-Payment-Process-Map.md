@@ -6,6 +6,8 @@ tags: [deliverable, week3, lab1, diagram, sweetgreen]
 # Order and Payment Process Map (Sweetgreen)
 
 > Diagram only. Diagnostic points, the three-point table, and the write-up live in [[Lab1-Process-Map-Sweetgreen]] — this note exists so the diagram can be embedded and edited on its own.
+>
+> **Post-curveball.** Nodes `IK` and `V` and the edges around them were added to absorb the curveball: for Infinite Kitchen stores, the kitchen system is owned and operated by Wonder, not Sweetgreen, since the December 2025 divestiture. See [[Lab1-Process-Map-Sweetgreen]] for the full reasoning.
 
 ```mermaid
 flowchart TD
@@ -36,6 +38,8 @@ flowchart TD
     end
 
     subgraph Kitchen["Kitchen and Pickup Staff"]
+        IK{"Infinite Kitchen store? (kitchen system is Wonder-owned since Dec 2025)"}
+        V{"②b Wonder-owned system confirms capacity and ingredient availability, in sync?"}
         H["Review order specifications and availability"]
         I{"② Can the order be prepared as specified?"}
         J["Prepare meal"]
@@ -53,9 +57,15 @@ flowchart TD
     end
 
     A --> B --> C --> D --> E
-    E -->|Yes| F --> G --> H --> I
+    E -->|Yes| F --> G --> IK
     E -->|No| N --> END1
 
+    IK -->|No: traditional make-line| H
+    IK -->|Yes: query Wonder-owned kitchen system, crosses a company boundary| V
+    V -->|Yes: synced and available| H
+    V -->|"No: stale sync, capacity limit, or vendor system unavailable (CURVEBALL)"| Q
+
+    H --> I
     I -->|Yes| J --> K
     I -->|No: unavailable item or unsupported request| Q
     Q --> S --> R
@@ -79,10 +89,12 @@ flowchart TD
     classDef control fill:#e8f2ff,stroke:#2563eb,color:#172554;
     classDef diagnostic fill:#fff3d6,stroke:#b7791f,color:#422006;
     classDef exception fill:#fde8e8,stroke:#c53030,color:#450a0a;
+    classDef curveball fill:#f3e8ff,stroke:#7e22ce,color:#3b0764;
 
     class F,X,Y,Y4,W control;
     class I,S diagnostic;
     class L,Q,T exception;
+    class IK,V curveball;
 ```
 
-**Legend:** ★ control point (where data is born/committed) · ①②③ the three diagnostic points · shaded blue = control point, amber = diagnostic point, red = exception-handling node.
+**Legend:** ★ control point (where data is born/committed) · ①②③ the three diagnostic points · shaded blue = control point, amber = diagnostic point, red = exception-handling node, **shaded purple = added to absorb the curveball** (the Wonder-owned Infinite Kitchen system boundary).
