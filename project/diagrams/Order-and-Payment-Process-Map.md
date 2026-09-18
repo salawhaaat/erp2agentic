@@ -7,7 +7,9 @@ tags: [deliverable, week3, lab1, diagram, sweetgreen]
 
 > Diagram only. Diagnostic points, the three-point table, and the write-up live in [[Lab1-Process-Map-Sweetgreen]] — this note exists so the diagram can be embedded and edited on its own.
 >
-> **Post-curveball.** Nodes `IK` and `V` and the edges around them were added to absorb the curveball: for Infinite Kitchen stores, the kitchen system is owned and operated by Wonder, not Sweetgreen, since the December 2025 divestiture. See [[Lab1-Process-Map-Sweetgreen]] for the full reasoning.
+> **Post-curveball.** Node `STALE` and its edges were added to absorb the curveball: deck card #3, "nightly batch, not real time." Availability data at decision ② now comes from two sources, a live system and a nightly legacy cache, and they don't always agree. See [[Lab1-Process-Map-Sweetgreen]] for the full reasoning and the data that confirms this is the curveball actually modeled in the sandbox.
+>
+> An annotated, presentation-ready version of this map (control-point IDs, decision labels, lab markers) is at `assets/Order-and-Payment-Process-Map-Annotated.png`.
 
 ```mermaid
 flowchart TD
@@ -38,9 +40,8 @@ flowchart TD
     end
 
     subgraph Kitchen["Kitchen and Pickup Staff"]
-        IK{"Infinite Kitchen store? (kitchen system is Wonder-owned since Dec 2025)"}
-        V{"②b Wonder-owned system confirms capacity and ingredient availability, in sync?"}
         H["Review order specifications and availability"]
+        STALE{"Does live availability match last night's cached snapshot?"}
         I{"② Can the order be prepared as specified?"}
         J["Prepare meal"]
         K{"Does the meal match the confirmed order?"}
@@ -57,15 +58,12 @@ flowchart TD
     end
 
     A --> B --> C --> D --> E
-    E -->|Yes| F --> G --> IK
+    E -->|Yes| F --> G --> H --> STALE
     E -->|No| N --> END1
 
-    IK -->|No: traditional make-line| H
-    IK -->|Yes: query Wonder-owned kitchen system, crosses a company boundary| V
-    V -->|Yes: synced and available| H
-    V -->|"No: stale sync, capacity limit, or vendor system unavailable (CURVEBALL)"| Q
+    STALE -->|Yes: sources agree| I
+    STALE -->|"No: nightly cache is stale, disagrees with live system (CURVEBALL)"| Q
 
-    H --> I
     I -->|Yes| J --> K
     I -->|No: unavailable item or unsupported request| Q
     Q --> S --> R
@@ -94,7 +92,13 @@ flowchart TD
     class F,X,Y,Y4,W control;
     class I,S diagnostic;
     class L,Q,T exception;
-    class IK,V curveball;
+    class STALE curveball;
 ```
 
-**Legend:** ★ control point (where data is born/committed) · ①②③ the three diagnostic points · shaded blue = control point, amber = diagnostic point, red = exception-handling node, **shaded purple = added to absorb the curveball** (the Wonder-owned Infinite Kitchen system boundary).
+**Legend:** ★ control point (where data is born/committed) · ①②③ the three diagnostic points · shaded blue = control point, amber = diagnostic point, red = exception-handling node, **shaded purple = added to absorb the curveball** (live vs. nightly-cached availability freshness check).
+
+## Annotated reference (pre-curveball state)
+
+Presentation-ready version with control-point IDs (CP1–CP6), decision labels (D1–D3), and the friction chain overlaid, generated before the curveball was absorbed into the mermaid source above. Control points and decisions map onto the tables in [[Lab1-Process-Map-Sweetgreen]].
+
+![[Order-and-Payment-Process-Map-Annotated.png]]

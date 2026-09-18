@@ -40,7 +40,8 @@ flowchart LR
 | Backbone-context note | Week 2 | [[project/Backbone-Context-Note-Sweetgreen]] |
 | Context-and-diagnosis brief | Week 3 | [[project/Context-and-Diagnosis-Brief-Sweetgreen]] |
 | Lab 1 pre-work (reality brief) | Before Week 3 lab | [[project/Lab1-Prework-Sweetgreen]] |
-| Lab 1 process map (in progress) | Week 3 lab | [[project/Lab1-Process-Map-Sweetgreen]] |
+| Lab 1 process map, curveball, and data sandbox | Week 3 lab | [[project/Lab1-Process-Map-Sweetgreen]] |
+| Board presentation deck (living, filled in lab by lab) | Ongoing | `project/Board-Presentation-Sweetgreen.pptx` |
 | Breakout scratch notes | Ongoing | [[project/Agentic AI Project]] |
 | Public research log | Ongoing | [[project/research/Sweetgreen-Public-Research]] |
 
