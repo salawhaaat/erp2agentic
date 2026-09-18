@@ -9,7 +9,7 @@ This is an Obsidian vault, not a codebase. It's a NYU Tandon course, IE-GY 9113B
 - `Syllabus and Rubrics/`: syllabus and assessment rubrics. Course-wide references, not tied to a specific week.
 - `Final Project Info/`: capstone kit orientation, storyboard, and the Board Memo/Presentation `.docx`/`.pptx` templates. These stay as binary files, not converted to Markdown.
 - `w0/`, `w1/`, `w2/`, `w3/`: one folder per course week, holding that week's study notes and slides only. Capstone deliverables don't live here, see `project/`.
-- `project/`: the team's Sweetgreen capstone work. Backbone-context note, context-and-diagnosis brief, Lab 1 pre-work brief, the Lab 1 process map, a research log under `project/research/`, and raw in-class breakout scratch notes. Kept separate from `w1`/`w2`/`w3` so the capstone reads as one unit instead of being scattered across weeks.
+- `project/`: the team's Sweetgreen capstone work. Backbone-context note, context-and-diagnosis brief, Lab 1 pre-work brief, the Lab 1 process map, a research log under `project/research/`, standalone diagram source files under `project/diagrams/` (embedded into the write-up notes with `![[...]]` rather than pasted inline, so a diagram can be edited in one place), and raw in-class breakout scratch notes. Kept separate from `w1`/`w2`/`w3` so the capstone reads as one unit instead of being scattered across weeks.
 
 ## Capstone context
 
