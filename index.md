@@ -22,7 +22,7 @@ Vault home / map of content. Capstone company: **Sweetgreen** (Order-to-Cash pro
 | Week 0 (optional) | [[w0/W0_ERPFloor_Course Primer\|The ERP Floor — pre-course primer]] | — |
 | Week 1 — The Integration Backbone | [[w1/W01_IntegrationBackbone_StudyNote_PB14\|study note]] | [[w1/W1_IntegrationBackbone_Slides_v3\|slides]] |
 | Week 2 — Failure to Leverage | [[w2/W02_FailureToLeverage_StudyNote_v6\|study note]] | [[w2/W2_FailureToLeverage_Lecure Notes_v9\|lecture notes]] |
-| Week 3 — Lab 1: Diagnose & Map a Process | [[w3/IE-GY-9113B_Lab1_StudyNote\|study note]] | — |
+| Week 3 — Lab 1: Diagnose & Map a Process | [[w3/IE-GY-9113B_Lab1_StudyNote\|study note]] | [[w3/W3_Lab1_Lecture-Notes\|lecture notes]] |
 
 ## Sweetgreen capstone deliverables
 
@@ -40,7 +40,9 @@ flowchart LR
 | Backbone-context note | Week 2 | [[project/Backbone-Context-Note-Sweetgreen]] |
 | Context-and-diagnosis brief | Week 3 | [[project/Context-and-Diagnosis-Brief-Sweetgreen]] |
 | Lab 1 pre-work (reality brief) | Before Week 3 lab | [[project/Lab1-Prework-Sweetgreen]] |
+| Lab 1 process map (in progress) | Week 3 lab | [[project/Lab1-Process-Map-Sweetgreen]] |
 | Breakout scratch notes | Ongoing | [[project/Agentic AI Project]] |
+| Public research log | Ongoing | [[project/research/Sweetgreen-Public-Research]] |
 
 ## Open-task checklist (from the announcements)
 
@@ -55,4 +57,4 @@ flowchart LR
 
 ## Vault conventions
 
-See `CLAUDE.md` at the repo root for how notes are structured, tagged, and maintained.
+See `ROBOT.md` at the repo root for how notes are structured, tagged, and maintained.
