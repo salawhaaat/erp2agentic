@@ -5,7 +5,6 @@ company: Sweetgreen
 due: Before Week 3 Lab 1 (Fri Sep 18, 2026)
 feeds: ["Board Memo §3 — Integration Backbone Assessment", "Storyboard S5"]
 ---
-
 # Lab 1 Pre-Work — Reality Brief (Sweetgreen)
 
 > ½–1 page pre-work per the [[IE-GY-9113B_Lab1_StudyNote|Lab 1 study note]] §3: pick a company, research the pain via the Four Lenses, draft first-pass hypotheses. Builds directly on [[Backbone-Context-Note-Sweetgreen]] and [[Context-and-Diagnosis-Brief-Sweetgreen]]. This is the raw material for the in-class build — not a finished map.

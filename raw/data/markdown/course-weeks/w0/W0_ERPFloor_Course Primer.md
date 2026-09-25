@@ -2,7 +2,6 @@
 title: "Week 0: The ERP Floor — Optional Pre-Course Primer"
 tags: [week0, study-note, course-materials, optional]
 ---
-
 # Study Note — Week 0: The ERP Floor (Optional Pre-Course Primer)
 
 *New York University — Tandon School of Engineering · Department of Technology Management and Innovation*

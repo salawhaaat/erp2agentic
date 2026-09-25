@@ -3,7 +3,6 @@ title: Decision Point
 type: concept
 tags: [concept]
 ---
-
 # Decision Point
 
 A moment where the flow is routed — approve or reject, one path or another — as distinct from a [[Control Point]], where data is born rather than chosen between. A named BPMN gateway. The costly case is usually rejection, which sends work back for manual rework before it re-enters the flow.

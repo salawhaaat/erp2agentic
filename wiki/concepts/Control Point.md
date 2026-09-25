@@ -3,7 +3,6 @@ title: Control Point
 type: concept
 tags: [concept]
 ---
-
 # Control Point
 
 A moment in a process where the business commits and a new authoritative fact is created — a PO issued, a serial number generated, credit approved, an invoice posted. Where governance and, later, automation attach. Distinct from a [[Decision Point]], where a routing choice is made rather than a fact born.

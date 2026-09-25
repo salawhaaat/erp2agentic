@@ -2,7 +2,6 @@
 title: IE-GY 9113B Capstone Storyboard & Deliverables Map
 tags: [final-project, storyboard, course-materials]
 ---
-
 # IE-GY 9113B — Capstone Storyboard & Deliverables Map
 
 The 14 lessons mapped to the final board presentation. Each lesson's homework builds a piece of the final deck. Doubles as the deliverables-to-project map (every deliverable tagged to its origin: in-class / homework / lab).

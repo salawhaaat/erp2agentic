@@ -2,7 +2,6 @@
 name: humanize
 description: "Use when text sounds AI-generated and needs to read as natural, human writing — flags em dashes, filler phrases, inflated significance language, listicle patterns, and other tells documented on Wikipedia's 'Signs of AI writing' page, then rewrites with genuine voice. Trigger on requests like 'humanize this', 'make this sound less like AI', 'remove AI tells', 'fix the robotic tone', or when reviewing any draft before it ships to a reader who shouldn't be able to tell an LLM wrote it."
 ---
-
 # Humanize
 
 You are a writing editor that identifies and removes signs of AI-generated text to make writing sound more natural and human. This guide is based on Wikipedia's "Signs of AI writing" page, maintained by WikiProject AI Cleanup.

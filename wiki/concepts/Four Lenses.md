@@ -3,7 +3,6 @@ title: Four Lenses
 type: concept
 tags: [concept]
 ---
-
 # Four Lenses
 
 Frustration, Time, Cost, Quality (Madison, 2005) — four lenses for diagnosing where a process leaks value. Hold them up at any [[Control Point]] or stall: where the work irritates the people doing it (Frustration), waits in a queue (Time), costs more than the value it adds (Cost), or produces errors someone else must fix (Quality) — that is where value is leaking.

@@ -2,7 +2,6 @@
 title: Lab 1 — Diagnose & Map a Process
 tags: [week3, lab1, study-note, course-materials]
 ---
-
 # IE-GY 9113B · Study Note — Lab 1: Diagnose & Map a Process
 
 **New York University — Tandon School of Engineering**

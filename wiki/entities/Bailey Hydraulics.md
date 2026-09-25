@@ -3,7 +3,6 @@ title: Bailey Hydraulics
 type: entity
 tags: [entity, company, case-study]
 ---
-
 # Bailey Hydraulics
 
 The Week 4 supporting case for RPA, and the course's second archetype made concrete: a mid-market manufacturer of mobile hydraulic components, running its business on NetSuite.

@@ -3,7 +3,6 @@ title: Vault Home
 tags: [index, moc]
 okf_version: "0.2"
 ---
-
 # IE-GY 9113B — Systems Integration: From ERP to Agentic AI
 
 Vault home / map of content. Capstone company: **Sweetgreen** (Order-to-Cash process).
@@ -56,7 +55,7 @@ flowchart LR
 | Week 4 presentation (standalone, to send teammates) | Week 4 | `wiki/project/week4/Week4-Presentation-Sweetgreen.pptx` / `.pdf` |
 | Public research log | Ongoing | [[Sweetgreen-Public-Research]] |
 
-Raw material feeding these: [[Sweetgreen-Breakout-Provenance]] (in-class breakout history, `wiki/project/shared/`), [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`), and the team's graded final annotated map — PDF at `raw/data/pdf/sweetgreen-lab1-evidence/`, transcribed at `raw/data/markdown/sweetgreen-lab1-evidence/`, and its content also folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis).
+Raw material feeding these: [[Sweetgreen-Breakout-Provenance]] (in-class breakout history, `wiki/project/shared/`) and [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`). The team's graded final annotated map (PDF) was read once, its content fully folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis), then removed — nothing in it wasn't already captured there.
 
 ## Concepts, entities, and comparisons
 

@@ -14,7 +14,7 @@ Three top-level layers — schema at root, immutable sources under `raw/`, LLM-m
 **`raw/` — read-only inputs. Never rewrite their substance, only fix a conversion artifact if you spot one.** Everything lives under the single child `raw/data/`, split by format first, then by topic, so it's obvious at a glance which format you're browsing and easy to find a file's counterpart in the other format (same topic folder, same basename):
 - `raw/data/pdf/<topic>/`: original, non-Markdown files — PDFs, plus the two `.docx`/`.pptx` templates that have no Markdown counterpart by design (they're the professor's editable originals, nothing to convert them against).
 - `raw/data/markdown/<topic>/`: the `markitdown` conversion of every PDF that has one, same basename as its PDF twin in the sibling tree.
-- The topic folders mirror each other exactly across both trees: `syllabus-and-rubrics/`, `final-project-info/`, `course-weeks/w0/` … `w4/`, `sweetgreen-lab1-evidence/` (the team's graded final annotated map — PDF *and* a Markdown transcription, since it's a diagram-heavy document worth having in both forms). One exception: `final-project-info/` also holds `Final Project Teams.pdf` and the two Office templates, PDF-and-office side only — no Markdown pair, by design.
+- The topic folders mirror each other exactly across both trees: `syllabus-and-rubrics/`, `final-project-info/`, `course-weeks/w0/` … `w4/`. One exception: `final-project-info/` also holds `Final Project Teams.pdf` and the two Office templates, PDF-and-office side only — no Markdown pair, by design.
 - `raw/data/transcripts/`: Markdown-only, no PDF source, genuinely verbatim — `announcements.md` (the professor's Brightspace announcements, newest first). Course-wide, not project-specific.
 - `raw/data/datasets/`: externally generated binaries with no Markdown/PDF duality — the Gemini-generated Lab 1 sandbox (`.xlsx`). The data *is* the artifact; there's nothing to transcribe.
 
@@ -58,7 +58,7 @@ Write plainly. Avoid em dashes; use commas, periods, or parentheses instead. Avo
 
 This vault is deliberately run as a compounding wiki, not a pile of retrieved documents, following the pattern popularized by Andrej Karpathy (https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f). Three layers, now physically separated on disk, not just conceptually:
 
-- **Raw sources — `raw/`.** Immutable inputs: converted-but-unaltered course readings and professor reference documents, split into `raw/data/pdf/` (originals) and `raw/data/markdown/` (conversions), each mirrored by topic folder (`course-weeks/`, `syllabus-and-rubrics/`, `final-project-info/`, `sweetgreen-lab1-evidence/`), verbatim communications (`raw/data/transcripts/`) and externally generated binaries the LLM only reads (`raw/data/datasets/`). Never rewrite the substance of anything here — correct a conversion artifact if you spot one, that's it.
+- **Raw sources — `raw/`.** Immutable inputs: converted-but-unaltered course readings and professor reference documents, split into `raw/data/pdf/` (originals) and `raw/data/markdown/` (conversions), each mirrored by topic folder (`course-weeks/`, `syllabus-and-rubrics/`, `final-project-info/`), verbatim communications (`raw/data/transcripts/`) and externally generated binaries the LLM only reads (`raw/data/datasets/`). Never rewrite the substance of anything here — correct a conversion artifact if you spot one, that's it.
 - **The wiki — `wiki/`.** Everything actively written, maintained, and cross-linked: `wiki/concepts/` (recurring terms), `wiki/entities/` (recurring companies/organizations), `wiki/comparisons/` (side-by-side distinctions), `wiki/project/` (the Sweetgreen capstone deliverables, diagrams, research). This layer should get richer and more cross-linked with every week, not just longer.
 - **The schema — root.** This file (`ROBOT.md`), `index.md`, and `log.md`. The conventions doc, the catalog, and the history. Update `ROBOT.md` whenever a new convention gets established, not just when asked to.
 
@@ -83,11 +83,11 @@ This vault follows Google's [Open Knowledge Format (OKF) v0.2](https://github.co
 - `sources` — provenance back to `raw/`, OKF's per-claim attribution pattern:
   ```yaml
   sources:
-    - id: annotated-map-pdf
-      resource: raw/data/pdf/sweetgreen-lab1-evidence/Sweetgreen-Lab1-Final-Annotated-Map.pdf
-      title: Team's final annotated process map (graded, 24 Sep 2026)
+    - id: lab1-sandbox
+      resource: raw/data/datasets/Sweetgreen-Lab1-Sandbox.xlsx
+      title: Gemini-generated Lab 1 sandbox
   ```
-  then cite it inline with a footnote keyed to the `id`: `The $44 figure comes from the graded map.[^annotated-map-pdf]`. Use this on `wiki/` pages that are substantively derived from one or two specific `raw/` files (a deliverable built from a PDF, a diagram modeled on a slide) — not required on every page.
+  then cite it inline with a footnote keyed to the `id`: `The $44 figure comes from the sandbox.[^lab1-sandbox]`. Use this on `wiki/` pages that are substantively derived from one or two specific `raw/` files (a deliverable built from a dataset, a diagram modeled on a slide) — not required on every page. If a cited `raw/` file is later removed as a fully-superseded exception (same bar as any other deletion here — nothing in it survives outside the wiki page), remove its now-dangling `sources` entry too, don't leave it pointing at nothing.
 - `generated` / `verified` — trust provenance (`generated: {by: claude-code/sonnet-5, at: <timestamp>}`, `verified: {by: human:<netid>, at: <timestamp>}`). Add `verified` once the professor or a teammate has actually reviewed a deliverable, not before.
 
 **Not required, don't force it:** OKF's `Attested Computation` type (for verifiable executable computation) doesn't apply to this vault — nothing here runs live queries. Skip it.

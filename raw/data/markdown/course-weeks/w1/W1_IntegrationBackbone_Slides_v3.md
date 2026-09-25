@@ -2,7 +2,6 @@
 title: The Integration Backbone — Week 1
 tags: [week1, slides, course-materials]
 ---
-
 # The Integration Backbone
 
 **Module 1 · The Integration Foundation**

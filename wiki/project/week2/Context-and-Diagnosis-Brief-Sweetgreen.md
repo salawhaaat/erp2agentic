@@ -5,7 +5,6 @@ company: Sweetgreen
 due: Week 3 (before Lab 1)
 feeds: ["Board Memo §2", "Storyboard S4"]
 ---
-
 # Context-and-Diagnosis Brief — Sweetgreen
 
 > One page. Assembles the three Week 2 breakouts (friction list → selective-redesign call → adoption + leverage case) over the [[Backbone-Context-Note-Sweetgreen|Week 1 backbone-context note]]. Board Memo §2 · Storyboard S4.

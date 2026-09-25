@@ -6,7 +6,6 @@ company: Sweetgreen
 status: living note
 feeds: ["Backbone-Context-Note-Sweetgreen", "Context-and-Diagnosis-Brief-Sweetgreen"]
 ---
-
 # Sweetgreen Public Research — Raw Source Log
 
 > Raw, source-tagged research gathered from public sources (SEC filings, press, an executive interview). This is a **research log**, not a deliverable — extend [[Backbone-Context-Note-Sweetgreen]] and [[Context-and-Diagnosis-Brief-Sweetgreen]] from here rather than duplicating this content into them wholesale. Add new sources to the bottom as they're found; keep entries dated.

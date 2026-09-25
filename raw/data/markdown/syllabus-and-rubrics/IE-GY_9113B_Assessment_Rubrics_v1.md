@@ -2,7 +2,6 @@
 title: Assessment Rubrics
 tags: [syllabus, rubrics, course-materials]
 ---
-
 # Assessment Rubrics
 
 NEW YORK UNIVERSITY TANDON SCHOOL OF ENGINEERING

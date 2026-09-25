@@ -2,7 +2,6 @@
 title: IE-GY 9113B Systems Integration Syllabus
 tags: [syllabus, course-materials]
 ---
-
 # IE-GY 9113B — Systems Integration: From ERP to Agentic AI
 
 New York University — Tandon School of Engineering

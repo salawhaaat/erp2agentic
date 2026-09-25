@@ -3,7 +3,6 @@ title: RPA vs Traditional Automation vs AI
 type: comparison
 tags: [comparison]
 ---
-
 # RPA vs Traditional Automation vs AI
 
 The three ways to take a human out of a process step, distinguished by where each one acts and what kind of input it can handle. Introduced in [[W04_RPA_StudyNote|Week 4]] as the axis the whole automation module is organized around.

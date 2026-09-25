@@ -5,7 +5,6 @@ company: Sweetgreen
 due: Week 2
 feeds: ["Board Memo §2", "Storyboard S1/S3"]
 ---
-
 # Backbone-Context Note — Sweetgreen
 
 > Homework seed for [[Context-and-Diagnosis-Brief-Sweetgreen|the Week 2 context-and-diagnosis brief]]. Follows the six-move read taught in the [[W1_IntegrationBackbone_Slides_v3|Week 1 slides]] (Chipotle worked example).

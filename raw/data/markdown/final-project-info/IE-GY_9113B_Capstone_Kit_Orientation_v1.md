@@ -2,7 +2,6 @@
 title: Capstone Kit Orientation
 tags: [final-project, orientation, course-materials]
 ---
-
 # Your Capstone Kit
 
 *New York University · Tandon School of Engineering — Department of Technology Management and Innovation*

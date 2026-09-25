@@ -3,7 +3,6 @@ title: Three Threads
 type: concept
 tags: [concept]
 ---
-
 # Three Threads
 
 The three business threads that run through every process in this course, meant to be heard as a recurring refrain: **Customer** (taking an order and serving the person as one coherent promise), **Operations and Supply Chain** (planning, inventory, and synchronization so a company can deliver what it promised), and **Cash Management** (how fast and reliably the backbone turns activity into cash — the thread that matters most because cash flow is the most common way businesses fail).

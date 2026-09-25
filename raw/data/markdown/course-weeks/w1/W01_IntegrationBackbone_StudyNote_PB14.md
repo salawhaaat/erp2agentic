@@ -2,7 +2,6 @@
 title: The Integration Backbone
 tags: [week1, study-note, course-materials]
 ---
-
 # Study Note — Week 1: Introduction — The Integration Backbone
 
 *New York University — Tandon School of Engineering*

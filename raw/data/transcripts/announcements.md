@@ -3,7 +3,6 @@ title: Course Announcements
 type: announcement-log
 tags: [transcript]
 ---
-
 ### Strong first build — refine your Lab 1 diagnosis and read for Week 4
 Sep 18, 2026 5:41 PM
 Hi everyone,

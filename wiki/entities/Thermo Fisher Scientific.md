@@ -3,7 +3,6 @@ title: Thermo Fisher Scientific
 type: entity
 tags: [entity, company, case-study]
 ---
-
 # Thermo Fisher Scientific
 
 The Week 4 primary case for RPA. One of the world's largest suppliers of scientific instruments and reagents, running on a sprawl of disparate ERPs, CRMs, and middleware after years of mergers. Handles more than ten million transactions and interactions a year across order entry, sales, and customer service.

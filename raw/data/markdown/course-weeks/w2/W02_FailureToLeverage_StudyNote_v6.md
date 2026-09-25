@@ -2,7 +2,6 @@
 title: Failure to Leverage + BPR as Remedy
 tags: [week2, study-note, course-materials]
 ---
-
 # Failure to Leverage + BPR as Remedy
 
 > New York University — Tandon School of Engineering

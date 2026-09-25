@@ -3,7 +3,6 @@ title: Obliterate Then Automate
 type: concept
 tags: [concept]
 ---
-
 # Obliterate Then Automate
 
 Hammer's (1990) cure for the [[Leverage Gap]]: redesign the work from a blank sheet before you automate it, rather than automating the process you already have. Automating a broken process "paves the cow path" — pours concrete over a route that wandered, making it a permanent, efficient way to go nowhere sensible. "Obliterate" is not "redesign everything": concentrate total redesign where value is created or destroyed, and adopt the standard elsewhere.

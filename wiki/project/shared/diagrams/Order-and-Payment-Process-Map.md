@@ -3,7 +3,6 @@ title: Order and Payment Process Map (Sweetgreen)
 type: diagram
 tags: [deliverable, week3, lab1, diagram, sweetgreen]
 ---
-
 # Order and Payment Process Map (Sweetgreen)
 
 > Diagnostic points, the three-point table, and the write-up live in [[Lab1-Process-Map-Sweetgreen]] — this note exists so the diagram can be embedded and edited on its own.

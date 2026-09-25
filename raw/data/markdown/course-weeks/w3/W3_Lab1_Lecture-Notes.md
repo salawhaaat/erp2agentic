@@ -2,7 +2,6 @@
 title: Lecture Notes — Lab 1 Diagnose & Map a Process
 tags: [week3, lab1, lecture-notes, course-materials, slides]
 ---
-
 # Module 1 · Lab 1 — Diagnose & Map a Process
 
 **IE-GY 9113B — Systems Integration: From ERP to Agentic AI**

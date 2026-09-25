@@ -3,7 +3,6 @@ title: Four Archetypes
 type: concept
 tags: [concept]
 ---
-
 # Four Archetypes
 
 Four company shapes that carry the course's lessons across scale: a global CPG manufacturer running sales-and-operations planning on SAP, a mid-market manufacturer running order-to-cash on NetSuite ([[Bailey Hydraulics]] is this archetype made concrete, per [[W04_RPA_StudyNote|Week 4]]), a Series-B startup stitched across Stripe, Shopify, and QuickBooks, and a fifty-person services firm living in HubSpot and Notion.

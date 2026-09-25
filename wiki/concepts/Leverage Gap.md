@@ -3,7 +3,6 @@ title: Leverage Gap
 type: concept
 tags: [concept]
 ---
-
 # Leverage Gap
 
 The distance between a backbone that works technically and a backbone that delivers business value. Closing it, layer by layer (integrate → automate → make intelligent → make agentic), is the work of the whole course.

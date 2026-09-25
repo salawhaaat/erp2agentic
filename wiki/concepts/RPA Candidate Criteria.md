@@ -3,7 +3,6 @@ title: RPA Candidate Criteria
 type: concept
 tags: [concept]
 ---
-
 # RPA Candidate Criteria
 
 The three tests a step must pass to be worth automating with a bot (Robotic Process Automation): **repetitive** (high, recurring volume, so a bot's fixed cost is spread across enough transactions), **rules-based** (every case decided by explicit, complete logic, no point where a human must exercise judgment), and **stable** (the process and the screens it runs on rarely change, since RPA drives screens and breaks when they move). A step must pass all three, or it is not a candidate — it routes instead to a [[Decision Point|judgment decision point]] (AI target) or back to redesign ([[Obliterate Then Automate]]).

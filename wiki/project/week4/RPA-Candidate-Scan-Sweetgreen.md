@@ -6,7 +6,6 @@ company: Sweetgreen
 due: Week 4 (Fri Sep 25, 2026)
 feeds: ["Board Memo §4 — Automation Journey", "Storyboard S6"]
 ---
-
 # RPA-Candidate Scan (Sweetgreen)
 
 > Runs the [[RPA Candidate Criteria|three-test filter]] from [[W04_RPA_StudyNote|Week 4's study note]] (repetitive, rules-based, stable) across the sharpened [[Lab1-Process-Map-Sweetgreen|Lab 1 process map]] — see [[RPA vs Traditional Automation vs AI]] for the three-way comparison this filter picks between. This is diagnostic work, not a build: it names which step becomes the Lab 2 automation and which stays a Lab 3 (AI agent) target, and rejects the rest with reasons. Milestone 1 (Diagnose), Board Memo §4. Covers all three in-class breakouts from [[W04_RPA_LN_Slides_v1|the Week 4 lecture slides]]: the map tagged end to end, the filtered scan itself, and one candidate costed and governed.

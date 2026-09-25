@@ -2,7 +2,6 @@
 title: Failure to Leverage + BPR as Remedy
 tags: [week2, lecture-notes, course-materials]
 ---
-
 # Failure to Leverage + BPR as Remedy
 
 *Module 1 · The Integration Foundation*

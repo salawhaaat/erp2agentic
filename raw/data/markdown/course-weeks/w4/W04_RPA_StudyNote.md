@@ -2,7 +2,6 @@
 title: RPA — The Tactical Integration Layer
 tags: [week4, study-note, course-materials]
 ---
-
 # Study Note — Week 4: RPA — The Tactical Integration Layer
 
 *New York University — Tandon School of Engineering*

@@ -6,14 +6,10 @@ company: Sweetgreen
 due: Week 3 Lab 1 (Fri Sep 18, 2026)
 feeds: ["Board Memo §3 — Integration Backbone Assessment", "Storyboard S5"]
 sources:
-  - id: final-annotated-map
-    resource: raw/data/pdf/sweetgreen-lab1-evidence/Sweetgreen-Lab1-Final-Annotated-Map.pdf
-    title: Team's final annotated process map (graded, 24 Sep 2026)
   - id: lab1-sandbox
     resource: raw/data/datasets/Sweetgreen-Lab1-Sandbox.xlsx
     title: Gemini-generated Lab 1 sandbox
 ---
-
 # Lab 1 Process Map — Order and Payment (Sweetgreen)
 
 > The in-class BPMN build from [[W3_Lab1_Lecture-Notes|Lab 1]], all four moves: map the real process, mark three diagnostic points, choose a curveball, and generate data last. Applied to [[Lab1-Prework-Sweetgreen|the pre-work reality brief]]'s core thesis: the handoff between digital ordering and kitchen execution. Status: all four moves done, data sandbox built in [[Sweetgreen-Lab1-Sandbox.xlsx]], sharpened post-checkpoint with a more specific control-point register (trigger, owner, fields, downstream use for CP1–CP6). Ready for present & share, and feeding [[RPA-Candidate-Scan-Sweetgreen|the Week 4 RPA-candidate scan]].
@@ -108,7 +104,7 @@ Per [[W3_Lab1_Lecture-Notes]], what gets presented today is slide S5 (Backbone d
 | Deliverable | Status | File |
 |---|---|---|
 | Sandbox (Gemini-generated) | Done, regenerated | [[Sweetgreen-Lab1-Sandbox.xlsx]] — clean $44 modeled burden, no lingering $72 figure |
-| Annotated map (★◆ + rejection path + 3 points + chain), specific control-point register | Done | [[Order-and-Payment-Process-Map]] — the [[Order-and-Payment-Swimlane\|swimlane image]] (primary) plus a Mermaid full-BPMN fallback. The team's graded PDF export (24 Sep 2026) was read and its content folded in here; the PDF itself is kept at `raw/data/pdf/sweetgreen-lab1-evidence/`, with a Markdown transcription at `raw/data/markdown/sweetgreen-lab1-evidence/`, see [[ROBOT]] |
+| Annotated map (★◆ + rejection path + 3 points + chain), specific control-point register | Done | [[Order-and-Payment-Process-Map]] — the [[Order-and-Payment-Swimlane\|swimlane image]] (primary) plus a Mermaid full-BPMN fallback. The team's graded PDF export (24 Sep 2026) was read once, its content fully folded in here, and then removed as fully superseded (nothing in it survived outside this note) — see [[ROBOT]]'s PDF rule |
 | One-page diagnosis (chain, consequence, prize) | Done | This note, §"Friction chain and board-level consequence" above — carries everything the graded "Section 3: Process diagnosis" page had |
 | Board deck, slide S5 filled in | Done | `wiki/project/shared/Board-Presentation-Sweetgreen.pptx` — the annotated map and one-line consequence dropped into the official `IE-GY_9113B_Board_Presentation_Template.pptx`'s S5 (Backbone diagnosis) slide; every other slide stays a placeholder for later weeks |
 | Standalone Lab 1 presentation (map, curveball, data, consequence) | Done | `wiki/project/week3/Lab1-Presentation-Sweetgreen.pptx` — a self-contained 5-slide deck for the in-class 6-minute share-out, separate from the semester-long board deck above |

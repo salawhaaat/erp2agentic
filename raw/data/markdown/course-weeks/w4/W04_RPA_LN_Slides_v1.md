@@ -3,7 +3,6 @@ title: RPA — The Tactical Integration Layer (Lecture Slides)
 type: study-note
 tags: [study-note, week4, rpa, sweetgreen, lecture-slides]
 ---
-
 # Module 2 · RPA — The Tactical Integration Layer
 
 *IE-GY 9113B — Systems Integration: From ERP to Agentic AI · Prof. Emanuele Cimica*
