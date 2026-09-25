@@ -29,7 +29,7 @@ Also raw — Markdown at `raw/data/markdown/course-weeks/`, each converted from 
 | Week 1 — The Integration Backbone | [[W01_IntegrationBackbone_StudyNote_PB14\|study note]] | [[W1_IntegrationBackbone_Slides_v3\|slides]] |
 | Week 2 — Failure to Leverage | [[W02_FailureToLeverage_StudyNote_v6\|study note]] | [[W2_FailureToLeverage_Lecure Notes_v9\|lecture notes]] |
 | Week 3 — Lab 1: Diagnose & Map a Process | [[IE-GY-9113B_Lab1_StudyNote\|study note]] | [[W3_Lab1_Lecture-Notes\|lecture notes]] |
-| Week 4 — RPA: The Tactical Integration Layer | [[W04_RPA_StudyNote\|study note]] | — |
+| Week 4 — RPA: The Tactical Integration Layer | [[W04_RPA_StudyNote\|study note]] | [[W04_RPA_LN_Slides_v1\|lecture slides]] |
 
 ## Sweetgreen capstone deliverables
 
@@ -55,7 +55,7 @@ flowchart LR
 | Lab 1 presentation (standalone, to present in class) | Week 3 lab | `wiki/project/Lab1-Presentation-Sweetgreen.pptx` |
 | Public research log | Ongoing | [[Sweetgreen-Public-Research]] |
 
-Raw material feeding these: [[Sweetgreen-Breakout-Scratch-Notes]] (in-class scratch work, `raw/data/scratch-notes/`), [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`), and the team's graded final annotated map — PDF at `raw/data/pdf/sweetgreen-lab1-evidence/`, transcribed at `raw/data/markdown/sweetgreen-lab1-evidence/`, and its content also folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis).
+Raw material feeding these: [[Sweetgreen-Breakout-Provenance]] (in-class breakout history, `wiki/project/`), [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`), and the team's graded final annotated map — PDF at `raw/data/pdf/sweetgreen-lab1-evidence/`, transcribed at `raw/data/markdown/sweetgreen-lab1-evidence/`, and its content also folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis).
 
 ## Concepts, entities, and comparisons
 
@@ -74,7 +74,7 @@ The vault's running glossary and cross-reference layer — kept current instead 
 - [x] Draft Week 2 context-and-diagnosis brief (Sweetgreen)
 - [x] Draft Lab 1 pre-work / reality brief (Sweetgreen)
 - [x] Sharpen Lab 1 deliverable post-checkpoint (specific control-point register, one-page diagnosis) and share the updated version with the professor before the Sep 25 class
-- [x] Draft the Week 4 RPA-candidate scan (Board Memo §4)
+- [x] Draft the Week 4 RPA-candidate scan (Board Memo §4), completing all three in-class breakouts (map tagged end to end, the filtered scan, one candidate costed and governed)
 - [ ] Send Week 1 + Week 2 notes to the professor by email before the Sep 18 lab (`ec5743@nyu.edu`)
 - [ ] Set up/confirm free accounts: Miro or Lucidchart, Airtable or Google Sheets + Gemini
 - [ ] Make account, before Lab 2 (Week 6)

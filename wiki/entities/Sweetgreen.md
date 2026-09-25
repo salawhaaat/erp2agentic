@@ -6,7 +6,7 @@ tags: [entity, company, sweetgreen]
 
 # Sweetgreen
 
-The capstone company for this course project. A fast-casual restaurant chain. Confirmed as the team's company in Week 2 (an earlier Week 1 exercise used AWS as a throwaway practice drill, not the real company — see [[Sweetgreen-Breakout-Scratch-Notes]]).
+The capstone company for this course project. A fast-casual restaurant chain. Confirmed as the team's company in Week 2 (an earlier Week 1 exercise used AWS as a throwaway practice drill, not the real company — see [[Sweetgreen-Breakout-Provenance]]).
 
 **Process studied:** Order-to-Cash — customer order, payment, kitchen, prep, verify and pack, pickup or delivery, then transaction complete.
 

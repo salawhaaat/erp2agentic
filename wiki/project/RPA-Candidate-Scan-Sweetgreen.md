@@ -9,13 +9,37 @@ feeds: ["Board Memo §4 — Automation Journey", "Storyboard S6"]
 
 # RPA-Candidate Scan (Sweetgreen)
 
-> Runs the [[RPA Candidate Criteria|three-test filter]] from [[W04_RPA_StudyNote|Week 4's study note]] (repetitive, rules-based, stable) across the sharpened [[Lab1-Process-Map-Sweetgreen|Lab 1 process map]] — see [[RPA vs Traditional Automation vs AI]] for the three-way comparison this filter picks between. This is diagnostic work, not a build: it names which step becomes the Lab 2 automation and which stays a Lab 3 (AI agent) target, and rejects the rest with reasons. Milestone 1 (Diagnose), Board Memo §4.
+> Runs the [[RPA Candidate Criteria|three-test filter]] from [[W04_RPA_StudyNote|Week 4's study note]] (repetitive, rules-based, stable) across the sharpened [[Lab1-Process-Map-Sweetgreen|Lab 1 process map]] — see [[RPA vs Traditional Automation vs AI]] for the three-way comparison this filter picks between. This is diagnostic work, not a build: it names which step becomes the Lab 2 automation and which stays a Lab 3 (AI agent) target, and rejects the rest with reasons. Milestone 1 (Diagnose), Board Memo §4. Covers all three in-class breakouts from [[W04_RPA_LN_Slides_v1|the Week 4 lecture slides]]: the map tagged end to end, the filtered scan itself, and one candidate costed and governed.
 
 ## Swimlane view
 
 ![[Order-and-Payment-Process-Map#Swimlane view (primary)]]
 
 Full detail: [[Order-and-Payment-Process-Map]]. Control points, decision points, and the friction chain are unpacked in [[Lab1-Process-Map-Sweetgreen]].
+
+## Breakout 1 — the map, tagged end to end
+
+Every step of the swimlane view above, tagged traditional / RPA / AI / redesign, per [[W04_RPA_LN_Slides_v1|the Week 4 in-class breakout instructions]].
+
+| Step | Tag | Why |
+|---|---|---|
+| O1.1–O1.2 Select items, submit order | — (customer action) | Not a candidate for any of the three; it's the customer's own input, nothing to automate on Sweetgreen's side |
+| O1.3 Process payment | Traditional | Payment capture already runs through Olo/PAR Brink's native integration — the plumbing, not a bot |
+| O1.4 Order accepted? (D1) | Not yet taggable | Acceptance criteria beyond payment aren't fully specified on the map — a mapping gap, not a routing call |
+| ★ CP1 Confirm order | Traditional | Record-creation inside the ordering system, not a screen-driven step |
+| K2.1 Review spec & availability | Traditional (native) / RPA (freshness check) | Reviewing the spec is system-native; the live-vs-cache comparison it feeds is the RPA candidate below |
+| **K2.2 Feasible? live vs. cached (D2)** | **RPA** | **Repetitive, rules-based, stable — see the filter table below** |
+| K2.3 Prepare meal | — (physical kitchen work) | Not a screen or system step; outside RPA's reach entirely |
+| K2.4 Quality check: matches order? | Rules-based, but not RPA | Passes the logic test but fails the RPA pattern — see "What was rejected" below |
+| K2.5 Pack & hand over | — (physical kitchen work) | Same as prep: not a candidate for any of the three |
+| C4.1 Collect order | — (customer action) | Not Sweetgreen's step to automate |
+| ★ CP4 Record completion | Traditional | Native system write on collection |
+| X3.1 Hold order, record issue | Traditional (record) / feeds AI below | The record-creation is native; the judgment about what happens next is the AI candidate |
+| **X3.2 Assess feasible options (D3)** | **AI** | **No fixed rule — see the filter table below** |
+| X3.3 Customer's choice / escalate | AI-adjacent (human + assistant) | Downstream of the D3 judgment call, not independently automatable |
+| ★ CP3/CP5/CP6 Record change/cancel/resolve | Traditional | Native system writes once a human or the AI assistant has decided |
+
+**Circled candidates: K2.2 (RPA) and X3.2 (AI)** — same two diagnostic points Lab 1 already marked, confirmed here by walking the whole map rather than just the three flagged steps.
 
 ## The filter, walked step by step
 
@@ -49,6 +73,16 @@ Full detail: [[Order-and-Payment-Process-Map]]. Control points, decision points,
 Pilot an automated freshness-and-feasibility gate at D2: a bot (or, per Lab 2, a Make scenario) that checks live availability against the cached snapshot before an order is accepted for kitchen prep, and routes disagreements straight to exception handling with the mismatch reason attached, instead of a person or the kitchen discovering it after the fact. Estimated exposure removed: up to $44 / 6 orders in the 30-order sample (proportionally, roughly 1.5% of order volume), pending validation against real order volume and real mismatch rates. This is the Lab 2 build target.
 
 Separately, flag D3 (recovery decision) as the Lab 3 AI-agent target: an assistant that recommends a recovery option for manager review, never deciding unilaterally, per the human-in-the-loop boundary in [[Lab1-Process-Map-Sweetgreen]]'s board-funding section.
+
+## Breakout 3 — cost it, and govern it
+
+One candidate (D2, the feasibility-and-freshness gate) taken through to a board number and a human safeguard, per [[W04_RPA_LN_Slides_v1|the Week 4 breakout instructions]].
+
+**The number, order-of-magnitude.** In the 30-order sandbox sample, 6 orders (20%) hit the live-vs-cache mismatch and consume 60 minutes of manual reconciliation between them — 10 minutes per affected order. If a single store runs on the order of 300 digital orders a day (an assumed, not sourced, per-store volume — validate against Sweetgreen's real per-store digital mix before using this in the actual board memo), the same 20% mismatch rate implies roughly 60 affected orders a day, or about 10 staff-hours a day of manual freshness-checking and exception handling across a store. That is the labor-removed side of the payback; the build side is the one-time Make scenario plus its ongoing licence, which this scan doesn't have a number for yet (Lab 2 produces that). **This is a shape, not a commitment** — the sandbox is synthetic and one modeled store; a real payback period needs real per-store order volume and real mismatch rates, not this scan's placeholder assumption.
+
+**Attended or unattended.** Unattended: the freshness gate itself needs no human when the two sources agree — that's the routine path, and it's most of the volume. The human stays exactly where the map already routes them, at the exception queue once the gate disagrees — not case-by-case on the happy path, but every time on the path that actually needs judgment.
+
+**The human-oversight and workforce note.** The checkpoint this bot needs is already named: every freshness disagreement routes to a person, never auto-resolved, because guessing which source is right when they disagree is exactly the kind of silent-wrong-answer risk [[W04_RPA_StudyNote]] warns a rules-based bot creates with perfect confidence. On the workforce side: this candidate removes a manual copy-and-compare check, not a role — nothing in the sandbox implies a position eliminated, and the freed minutes are exception-queue minutes returned to staff who are already doing exception handling, not hours cut from a schedule. That's a narrower claim than "redeployment to higher-value work," and it's the honest one this scan can currently support; a fuller answer (what the firm owes anyone whose role does change as automation scales past this one candidate) is Board Memo §7's job, not this scan's.
 
 ## Where this lands: slide S6 and Board Memo §4
 
