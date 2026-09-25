@@ -57,7 +57,7 @@
   <text x="555" y="219" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">Confirm order</text>
   <text x="555" y="233" text-anchor="middle" font-size="9.5" fill="#1e3a8a">CP1 · data born</text>
 
-  <text x="1185" y="192" text-anchor="middle" font-size="14" fill="#b7791f">★</text>
+  <text x="1150" y="212" text-anchor="middle" font-size="14" fill="#b7791f">★</text>
   <rect x="1110" y="200" width="150" height="44" rx="4" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.6"/>
   <text x="1185" y="219" text-anchor="middle" font-size="11" font-weight="700" fill="#1e3a8a">Record completion</text>
   <text x="1185" y="233" text-anchor="middle" font-size="9.5" fill="#1e3a8a">CP4</text>
@@ -135,15 +135,15 @@
   <text x="770" y="410" text-anchor="middle" font-size="9" fill="#b91c1c">no</text>
 
   <!-- quality no -> hold & assess (dashed red rejection path) -->
-  <path d="M1110,370 Q1110,415 800,443" fill="none" stroke="#b91c1c" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
+  <path d="M1110,370 Q1110,420 770,439" fill="none" stroke="#b91c1c" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
   <text x="990" y="415" text-anchor="middle" font-size="9" fill="#b91c1c">no: reject → rework → re-serve late</text>
 
   <!-- hold -> recovery diamond -->
   <line x1="795" y1="460" x2="798" y2="460" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)"/>
 
   <!-- recovery agreed (change) -> dashed red curve back to Review spec box (kitchen re-entry) -->
-  <path d="M880,430 Q880,270 630,318" fill="none" stroke="#b91c1c" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
-  <text x="800" y="275" text-anchor="middle" font-size="9" fill="#b91c1c">agrees to change → re-enter kitchen review</text>
+  <path d="M880,430 Q820,180 600,316" fill="none" stroke="#b91c1c" stroke-width="1.6" stroke-dasharray="6,4" marker-end="url(#arrowRed)"/>
+  <text x="760" y="195" text-anchor="middle" font-size="9" fill="#b91c1c">agrees to change → re-enter kitchen review</text>
 
   <!-- recovery no/cancel -> record cancel -->
   <line x1="960" y1="460" x2="1018" y2="460" stroke="#1f2937" stroke-width="1.6" marker-end="url(#arrow)"/>

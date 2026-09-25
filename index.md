@@ -53,6 +53,7 @@ flowchart LR
 | RPA-candidate scan (Board Memo §4) | Week 4 | [[RPA-Candidate-Scan-Sweetgreen]] |
 | Board presentation deck (living, filled in lab by lab) | Ongoing | `wiki/project/Board-Presentation-Sweetgreen.pptx` |
 | Lab 1 presentation (standalone, to present in class) | Week 3 lab | `wiki/project/Lab1-Presentation-Sweetgreen.pptx` |
+| Week 4 presentation (standalone, to send teammates) | Week 4 | `wiki/project/Week4-Presentation-Sweetgreen.pptx` / `.pdf` |
 | Public research log | Ongoing | [[Sweetgreen-Public-Research]] |
 
 Raw material feeding these: [[Sweetgreen-Breakout-Provenance]] (in-class breakout history, `wiki/project/`), [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`), and the team's graded final annotated map — PDF at `raw/data/pdf/sweetgreen-lab1-evidence/`, transcribed at `raw/data/markdown/sweetgreen-lab1-evidence/`, and its content also folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis).
