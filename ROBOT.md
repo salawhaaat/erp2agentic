@@ -1,3 +1,8 @@
+---
+title: Working notes for this vault
+type: schema
+tags: [schema]
+---
 # Working notes for this vault
 
 This is an Obsidian vault, not a codebase. It's a NYU Tandon course, IE-GY 9113B: Systems Integration, From ERP to Agentic AI, converted from Brightspace PDFs into Markdown so it's easy to track in git and browse on GitHub. Start at [[index]] for navigation.
@@ -76,7 +81,7 @@ This vault is deliberately run as a compounding wiki, not a pile of retrieved do
 
 This vault follows Google's [Open Knowledge Format (OKF) v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md), a plain-Markdown-plus-YAML-frontmatter standard for portable, agent-readable knowledge bundles. `index.md` declares `okf_version: "0.2"` in its frontmatter.
 
-**What every `wiki/` and `raw/` Markdown file needs (the one required field):** `type` — a short string naming the kind of thing the file is. This vault's types so far: `concept`, `entity`, `comparison`, `deliverable`, `diagram`, `study-note`, `reference` (syllabus/rubrics/templates), `research-log`, `scratch-notes`, `announcement-log`. Add a new type rather than force-fitting an odd page into an existing one.
+**What every `wiki/` and `raw/` Markdown file needs (the one required field):** `type` — a short string naming the kind of thing the file is. This vault's types so far: `concept`, `entity`, `comparison`, `deliverable`, `diagram`, `study-note`, `reference` (syllabus/rubrics/templates), `research-log`, `scratch-notes`, `announcement-log`, `schema` (this file). Add a new type rather than force-fitting an odd page into an existing one.
 
 **Recommended, used where it earns its keep, not everywhere:**
 - `description` — one sentence, for a future index/search pass.
