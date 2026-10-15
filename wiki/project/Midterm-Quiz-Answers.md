@@ -2,7 +2,7 @@
 title: Midterm Quiz Answers (Quizz 1)
 type: deliverable
 tags: [deliverable, quiz, midterm, sweetgreen]
-description: Short keyword answers to the three Quizz 1 (Mid Term) questions, tied to Sweetgreen and Lab 2.
+description: The three Quizz 1 (Mid Term) questions with the answers submitted, written as short paragraphs.
 sources:
   - id: w2
     resource: raw/data/markdown/course-weeks/w2/W02_FailureToLeverage_StudyNote_v6.md
@@ -11,26 +11,22 @@ sources:
 ---
 # Midterm Quiz Answers (Quizz 1)
 
-Due Oct 14, 2026, 11:59 PM. Concepts: [[Leverage Gap]], [[Obliterate Then Automate]], [[RPA Candidate Criteria]]. Evidence: [[RPA-Candidate-Scan-Sweetgreen]], [[Lab2-Automation-Sweetgreen]].
+IE-GY 9113B, due Oct 14, 2026, 11:59 PM. Related: [[Leverage Gap]], [[Obliterate Then Automate]], [[RPA Candidate Criteria]], [[RPA-Candidate-Scan-Sweetgreen]], [[Lab2-Automation-Sweetgreen]].
 
-## Q1. Failure to leverage vs implementation failure; the principle
+## Question 1
 
-- **Implementation failure:** the system does not work. It crashes, loses data, or never goes live. Everyone sees it.
-- **Failure to leverage:** the system works, but the value never arrives because the process was never redesigned. Quieter and far more common (Gartner: most ERP projects miss business-case goals).
-- **Why automating a broken process is worse:** it gives a faster broken process. It locks in bad steps, scales errors, and makes the process harder to change later ("paving the cow path"). Examples: Nike (2000), Birmingham Oracle (2023).
-- **Principle:** *Obliterate, then automate* (Hammer).
-- **What it requires first:** redesign the process from a blank sheet before automating. Ask whether the step should exist at all. Focus redesign where value is created or destroyed (Four Lenses) and adopt the standard elsewhere.
+**Distinguish failure to leverage from implementation failure, and explain why automating a broken process makes things worse. Name the principle that fixes it and what it requires you to do first.**
 
-## Q2. Three RPA criteria; a step that fails one
+An implementation failure is when the system simply does not work. It crashes, loses data, or never goes live, so everyone can see it. A failure to leverage is different, because the system works fine but the business still gets no value from it. This usually happens because the process behind it was never fixed, and it is the more common problem. Automating a broken process makes things worse since the software only runs the same bad steps faster and at bigger scale, which locks the problem in. Nike in 2000 and Birmingham's Oracle go-live in 2023 both made this mistake. The principle that fixes it is "obliterate, then automate." It requires us to redesign the process first, starting from a blank sheet and asking whether each step should exist at all. We focus that redesign where value is created or lost, and only then do we automate what is left.
 
-- **Three criteria:** repetitive (high, recurring volume), rules-based (explicit logic, no judgment), stable (process and screens rarely change). A step must pass all three.
-- **My project (Sweetgreen):** D3, choosing the recovery option after an order is blocked. It looks automatable because it recurs and uses structured order data.
-- **Fails:** *rules-based*. Staff weigh customer urgency, ETA and queue impact, and the customer must give consent (CP3). That is human judgment, so D3 is an AI or human target, not RPA.
-- **Contrast:** D2, the availability check, passes all three and became the Lab 2 automation.
+## Question 2
 
-## Q3. Why RPA stalls at scale; CoE; Lab 2 failure mode
+**Give the three criteria that make a step a good RPA candidate, then describe one step from your own project that looks automatable but fails one criterion, and say which.**
 
-- **Why it stalls:** bots are brittle. A screen or system changes and the bot breaks. At hundreds of bots, maintenance grows faster than new work (also bot sprawl: unowned shadow automations).
-- **What a Center of Excellence does:** one central team owns standards, bot ownership and registry, monitoring, maintenance, and governance, so bots stay alive and nobody builds shadow bots.
-- **Lab 2 failure mode:** bad or stale input data. The first rule approved four problem orders (unavailable stock, blocked, stale source, unmatched item) and silently dropped one (missing availability value).
-- **Human-oversight control it implies:** a review queue instead of auto-approve. Staff review (shift lead holds the order at CP2) and data review (integration owner repairs input), plus a 0 to 60 minute source-freshness check and an audit log. Humans keep D3 and consent (CP3).
+A good RPA candidate must be repetitive, rules-based, and stable. Repetitive means it happens often enough to pay back the cost of building a bot. Rules-based means clear logic decides every case, with no need for judgment. Stable means the process and screens rarely change, because a bot breaks when they do. In our Sweetgreen project, D3 (choosing a recovery option when an order is blocked) looks automatable at first, since it happens often and uses structured order data. However, it fails the rules-based test. Staff have to weigh customer urgency, the new wait time, and queue impact, and the customer must also agree to the change. That takes human judgment, so D3 is not an RPA step. By contrast, D2, the availability check, passes all three tests, which is why we automated it in Lab 2.
+
+## Question 3
+
+**RPA works but doesn't scale. Explain one reason it stalls as it grows and what a Center of Excellence does about it; then, from your Lab 2 automation, name one failure mode and the human-oversight control it implies.**
+
+RPA stalls mainly because bots are brittle. When a screen or system changes, the bot breaks, and once a company has hundreds of bots, fixing them takes more time than building new ones. Bots that nobody owns make this even worse. A Center of Excellence deals with this by acting as one central team that sets standards, owns and tracks every bot, monitors them, and handles maintenance. As a result, bots stay healthy and nobody builds hidden ones. In our Lab 2 automation, the clearest failure mode was bad or stale input data. Our first rule approved four problem orders and silently dropped one with a missing availability value. Because of this, the control we need is human review instead of automatic approval. Orders with an operational problem go to staff review, where the shift lead holds the order, and orders with a data problem go to data review, where the integration owner fixes the input. We also added a freshness check and an audit log, so people can always see what the bot decided and why.
