@@ -53,6 +53,7 @@ flowchart LR
 | Lab 1 process map, curveball, and data sandbox | Week 3 lab, sharpened Week 4 post-checkpoint | [[Lab1-Process-Map-Sweetgreen]] |
 | RPA-candidate scan (Board Memo §4) | Week 4 | [[RPA-Candidate-Scan-Sweetgreen]] |
 | Lab 2 automation build and tests (Board Memo §4) | Week 6 | [[Lab2-Automation-Sweetgreen]] |
+| Midterm quiz answers (Quizz 1, due Oct 14) | Midterm | [[Midterm-Quiz-Answers]] |
 | Board presentation deck (living, filled in lab by lab) | Ongoing | `wiki/project/shared/Board-Presentation-Sweetgreen.pptx` |
 | Lab 1 presentation (standalone, to present in class) | Week 3 lab | `wiki/project/week3/Lab1-Presentation-Sweetgreen.pptx` |
 | Week 4 presentation (standalone, to send teammates) | Week 4 | `wiki/project/week4/Week4-Presentation-Sweetgreen.pptx` / `.pdf` |
