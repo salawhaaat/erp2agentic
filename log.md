@@ -7,6 +7,13 @@ tags: [log]
 
 OKF-style: date-grouped, newest date first. Backfilled from git history and session context on 2026-09-25 when this log was introduced and later reformatted to match [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md); entries before 2026-09-25 are reconstructed from commit messages, not written live.
 
+## 2026-10-14
+
+* **Ingest**: Pulled the team Google Drive folder (IE-GY 9113B Team 4) in through the Drive connector. The files are private, so `gdown` was refused and Chrome did not respond; the Lab 2 PDFs and deck were read as text and saved as Markdown under `raw/data/markdown/team-drive/lab2/` (group guide, live evidence, postmortem, board slides S3-S7). No binaries were downloaded. The older Drive docs (backbone note, Lab 1 pre-work, Week 4 deck) already exist in the vault and were skipped; the Lab 2 `.zip`, screenshot and the near-empty CoE sheet were not ingested.
+* **Ingest**: Added `W05_ScalingRPA_CoE` and `W06_Lab2_Automate` study notes and lecture slides as paired PDF and Markdown under `w5/` and `w6/`. Skipped the Week 4 pair (byte-identical to the copies already in `w4/`) and one duplicate Lab 2 slides download.
+* **Ingest**: Added the Drive zip download. Lab 2 originals (group guide, live evidence, postmortem PDFs, board slides `.pptx`, Make screenshot) are in `raw/data/pdf/team-drive/lab2/`; the Lab 2 sandbox, CoE sheet and `Live_AutoActions.csv` (30 rows) are in `raw/data/datasets/`; `Agentic AI Project.docx` is kept as an original in `raw/data/pdf/team-drive/` (not converted, `markitdown` lacks its docx dependency). Skipped as duplicates of what the vault already holds: Backbone note, Context brief, Lab 1 pre-work, Week 4 deck, `[TEST]` Lab 1 sandbox, and the nested `Final_Deliverables.zip` (same files).
+* **Deliverable**: Wrote `wiki/project/week6/Lab2-Automation-Sweetgreen.md` from the Lab 2 team files and updated `index.md`.
+
 ## 2026-09-25
 
 * **Ingest**: Converted Week 4 study note (RPA) from PDF to Markdown, added to `raw/papers/course-weeks/w4/`.

@@ -29,6 +29,8 @@ Also raw — Markdown at `raw/data/markdown/course-weeks/`, each converted from 
 | Week 2 — Failure to Leverage | [[W02_FailureToLeverage_StudyNote_v6\|study note]] | [[W2_FailureToLeverage_Lecure Notes_v9\|lecture notes]] |
 | Week 3 — Lab 1: Diagnose & Map a Process | [[IE-GY-9113B_Lab1_StudyNote\|study note]] | [[W3_Lab1_Lecture-Notes\|lecture notes]] |
 | Week 4 — RPA: The Tactical Integration Layer | [[W04_RPA_StudyNote\|study note]] | [[W04_RPA_LN_Slides_v1\|lecture slides]] |
+| Week 5 — Scaling RPA: Center of Excellence | [[W05_ScalingRPA_CoE_StudyNote_v2\|study note]] | [[W05_ScalingRPA_CoE_LN_Slides_v1\|lecture slides]] |
+| Week 6 — Lab 2: Automate the Repeatable Part | [[W06_Lab2_Automate_StudyNote_v1\|study note]] | [[W06_Lab2_Automate_LN_Slides_v1\|lecture slides]] |
 
 ## Sweetgreen capstone deliverables
 
@@ -40,7 +42,7 @@ flowchart LR
     B --> C["Lab 1 Pre-Work\n(reality brief, due before Wk 3 lab)"]
     C --> D["Board Memo §2/§3\n+ Storyboard S1/S3/S4/S5"]
     D --> E["RPA-Candidate Scan\n(Week 4 → Board Memo §4)"]
-    E --> F["Lab 2 build in Make\n(Week 6, not yet started)"]
+    E --> F["Lab 2 build in Make\n(Week 6, done)"]
 ```
 
 | Deliverable | Due | Note |
@@ -50,12 +52,13 @@ flowchart LR
 | Lab 1 pre-work (reality brief) | Before Week 3 lab | [[Lab1-Prework-Sweetgreen]] |
 | Lab 1 process map, curveball, and data sandbox | Week 3 lab, sharpened Week 4 post-checkpoint | [[Lab1-Process-Map-Sweetgreen]] |
 | RPA-candidate scan (Board Memo §4) | Week 4 | [[RPA-Candidate-Scan-Sweetgreen]] |
+| Lab 2 automation build and tests (Board Memo §4) | Week 6 | [[Lab2-Automation-Sweetgreen]] |
 | Board presentation deck (living, filled in lab by lab) | Ongoing | `wiki/project/shared/Board-Presentation-Sweetgreen.pptx` |
 | Lab 1 presentation (standalone, to present in class) | Week 3 lab | `wiki/project/week3/Lab1-Presentation-Sweetgreen.pptx` |
 | Week 4 presentation (standalone, to send teammates) | Week 4 | `wiki/project/week4/Week4-Presentation-Sweetgreen.pptx` / `.pdf` |
 | Public research log | Ongoing | [[Sweetgreen-Public-Research]] |
 
-Raw material feeding these: [[Sweetgreen-Breakout-Provenance]] (in-class breakout history, `wiki/project/shared/`) and [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`). The team's graded final annotated map (PDF) was read once, its content fully folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis), then removed — nothing in it wasn't already captured there.
+Team Drive transcriptions of the Lab 2 files (text only) are under `raw/data/markdown/team-drive/lab2/`. Raw material feeding these: [[Sweetgreen-Breakout-Provenance]] (in-class breakout history, `wiki/project/shared/`) and [[Sweetgreen-Lab1-Sandbox.xlsx|the Gemini-generated Lab 1 sandbox]] (`raw/data/datasets/`). The team's graded final annotated map (PDF) was read once, its content fully folded into [[Lab1-Process-Map-Sweetgreen]] (control register, friction chain, diagnosis), then removed — nothing in it wasn't already captured there.
 
 ## Concepts, entities, and comparisons
 
