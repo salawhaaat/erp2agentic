@@ -14,7 +14,7 @@ Three top-level layers — schema at root, immutable sources under `raw/`, LLM-m
 **Schema (root):**
 - `index.md`: vault home and map of content, the main navigation page in Obsidian.
 - `ROBOT.md`: this file. Conventions and workflow.
-- `log.md`: append-only chronological record of vault activity, newest entries at the bottom.
+- `log.md`: append-only chronological record of vault activity, newest date first, same as the format described under "`log.md` format" below.
 
 **`raw/` — read-only inputs. Never rewrite their substance, only fix a conversion artifact if you spot one.** Everything lives under the single child `raw/data/`, split by format first, then by topic, so it's obvious at a glance which format you're browsing and easy to find a file's counterpart in the other format (same topic folder, same basename):
 - `raw/data/pdf/<topic>/`: original, non-Markdown files — PDFs, plus the two `.docx`/`.pptx` templates that have no Markdown counterpart by design (they're the professor's editable originals, nothing to convert them against).
@@ -70,7 +70,7 @@ This vault is deliberately run as a compounding wiki, not a pile of retrieved do
 
 **Ingest** (adding a new week's material or a new deliverable): drop/convert the raw material into the right `raw/` subfolder first if it's a new source. Then draft the wiki content: check whether any term in it is already a `wiki/concepts/` page, any company already a `wiki/entities/` page — link to it (`[[Control Point]]`) instead of re-explaining it inline. If a term or entity recurs across 2+ sources and has no page yet, create one. A good answer worth keeping (a comparison, a synthesis) becomes a `wiki/comparisons/` page, not just prose buried in one deliverable. Update `index.md`'s relevant table. Append one line to `log.md`.
 
-**Query** (answering a question about the course or the capstone): read `index.md` first to find the relevant pages, then `wiki/concepts/` and `wiki/entities/` for any term or company involved, then drill into the specific `wiki/project/` or `raw/data/markdown/course-weeks/` notes. Don't re-derive a diagnosis or a definition that already exists somewhere in the vault — extend or cite it (this is already the rule for capstone deliverables under "Capstone context" above; it now applies vault-wide). If the answer is worth keeping, file it as a new page in the appropriate `wiki/` subfolder rather than leaving it only in chat.
+**Query** (answering a question about the course or the capstone): always search the vault before answering from general knowledge, and say which vault page the answer came from. If the vault doesn't cover it, say so before answering from outside knowledge. Read `index.md` first to find the relevant pages, then `wiki/concepts/` and `wiki/entities/` for any term or company involved, then drill into the specific `wiki/project/` or `raw/data/markdown/course-weeks/` notes. Don't re-derive a diagnosis or a definition that already exists somewhere in the vault — extend or cite it (this is already the rule for capstone deliverables under "Capstone context" above; it now applies vault-wide). If the answer is worth keeping, file it as a new page in the appropriate `wiki/` subfolder rather than leaving it only in chat.
 
 **Lint** (periodically, or when asked to check the vault's health): look for orphan pages in `wiki/` (nothing links to them), terms or companies mentioned in 2+ places but still explained inline instead of linked to a page, and claims in an older `wiki/project/` note that a newer one has superseded without a cross-reference back. Fix what you find or flag it in `log.md` rather than silently leaving it.
 
@@ -82,7 +82,7 @@ This vault is deliberately run as a compounding wiki, not a pile of retrieved do
 
 This vault follows Google's [Open Knowledge Format (OKF) v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md), a plain-Markdown-plus-YAML-frontmatter standard for portable, agent-readable knowledge bundles. `index.md` declares `okf_version: "0.2"` in its frontmatter.
 
-**What every `wiki/` and `raw/` Markdown file needs (the one required field):** `type` — a short string naming the kind of thing the file is. This vault's types so far: `concept`, `entity`, `comparison`, `deliverable`, `diagram`, `study-note`, `week-summary`, `reference` (syllabus/rubrics/templates), `research-log`, `scratch-notes`, `announcement-log`, `team-source` (text transcription of a teammate's Drive file), `schema` (this file). Add a new type rather than force-fitting an odd page into an existing one.
+**What every `wiki/` and `raw/` Markdown file needs (the one required field):** `type` — a short string naming the kind of thing the file is. This vault's types so far: `concept`, `entity`, `comparison`, `deliverable`, `diagram`, `study-note`, `week-summary`, `reference` (syllabus/rubrics/templates), `research-log`, `scratch-notes`, `announcement-log`, `team-source` (text transcription of a teammate's Drive file), `schema` (this file), `index` (`index.md`), `log` (`log.md`). Add a new type rather than force-fitting an odd page into an existing one.
 
 **Recommended, used where it earns its keep, not everywhere:**
 - `description` — one sentence, for a future index/search pass.
