@@ -7,6 +7,11 @@ tags: [log]
 
 OKF-style: date-grouped, newest date first. Backfilled from git history and session context on 2026-09-25 when this log was introduced and later reformatted to match [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md); entries before 2026-09-25 are reconstructed from commit messages, not written live.
 
+## 2026-10-16
+
+* **Ingest**: Added `W07_RPAtoIA_StudyNote_v1.pdf` (Week 7, From RPA to Intelligent Automation) as a paired PDF + Markdown under `raw/data/{pdf,markdown}/course-weeks/w7/`. Converted with `pdftotext` (`markitdown` not installed), page footers stripped. Not hand-checked against the PDF.
+* **Creation**: New `wiki/weeks/` layer with a catch-up summary for every week, W0 to W7 (`type: week-summary`), after finding that W5 had raw Markdown but no wiki page. Added the [[Center of Excellence]] concept page. Registered the folder and type in `ROBOT.md` and added a wiki-summary column to `index.md`.
+
 ## 2026-10-14
 
 * **Ingest**: Pulled the team Google Drive folder (IE-GY 9113B Team 4) in through the Drive connector. The files are private, so `gdown` was refused and Chrome did not respond; the Lab 2 PDFs and deck were read as text and saved as Markdown under `raw/data/markdown/team-drive/lab2/` (group guide, live evidence, postmortem, board slides S3-S7). No binaries were downloaded. The older Drive docs (backbone note, Lab 1 pre-work, Week 4 deck) already exist in the vault and were skipped; the Lab 2 `.zip`, screenshot and the near-empty CoE sheet were not ingested.

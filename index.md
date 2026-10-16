@@ -22,15 +22,16 @@ Raw, professor-provided reference material — see `raw/data/pdf/` and `raw/data
 
 Also raw — Markdown at `raw/data/markdown/course-weeks/`, each converted from the matching Brightspace PDF at `raw/data/pdf/course-weeks/` (same topic folder, same basename).
 
-| Week | Study note | Slides / other |
-|---|---|---|
-| Week 0 (optional) | [[W0_ERPFloor_Course Primer\|The ERP Floor — pre-course primer]] | — |
-| Week 1 — The Integration Backbone | [[W01_IntegrationBackbone_StudyNote_PB14\|study note]] | [[W1_IntegrationBackbone_Slides_v3\|slides]] |
-| Week 2 — Failure to Leverage | [[W02_FailureToLeverage_StudyNote_v6\|study note]] | [[W2_FailureToLeverage_Lecure Notes_v9\|lecture notes]] |
-| Week 3 — Lab 1: Diagnose & Map a Process | [[IE-GY-9113B_Lab1_StudyNote\|study note]] | [[W3_Lab1_Lecture-Notes\|lecture notes]] |
-| Week 4 — RPA: The Tactical Integration Layer | [[W04_RPA_StudyNote\|study note]] | [[W04_RPA_LN_Slides_v1\|lecture slides]] |
-| Week 5 — Scaling RPA: Center of Excellence | [[W05_ScalingRPA_CoE_StudyNote_v2\|study note]] | [[W05_ScalingRPA_CoE_LN_Slides_v1\|lecture slides]] |
-| Week 6 — Lab 2: Automate the Repeatable Part | [[W06_Lab2_Automate_StudyNote_v1\|study note]] | [[W06_Lab2_Automate_LN_Slides_v1\|lecture slides]] |
+| Week | Study note | Slides / other | Wiki summary |
+|---|---|---|---|
+| Week 0 (optional) | [[W0_ERPFloor_Course Primer\|The ERP Floor — pre-course primer]] | — | [[Week-0-ERP-Floor]] |
+| Week 1 — The Integration Backbone | [[W01_IntegrationBackbone_StudyNote_PB14\|study note]] | [[W1_IntegrationBackbone_Slides_v3\|slides]] | [[Week-1-Integration-Backbone]] |
+| Week 2 — Failure to Leverage | [[W02_FailureToLeverage_StudyNote_v6\|study note]] | [[W2_FailureToLeverage_Lecure Notes_v9\|lecture notes]] | [[Week-2-Failure-to-Leverage]] |
+| Week 3 — Lab 1: Diagnose & Map a Process | [[IE-GY-9113B_Lab1_StudyNote\|study note]] | [[W3_Lab1_Lecture-Notes\|lecture notes]] | [[Week-3-Lab-1-Diagnose-and-Map]] |
+| Week 4 — RPA: The Tactical Integration Layer | [[W04_RPA_StudyNote\|study note]] | [[W04_RPA_LN_Slides_v1\|lecture slides]] | [[Week-4-RPA]] |
+| Week 5 — Scaling RPA: Center of Excellence | [[W05_ScalingRPA_CoE_StudyNote_v2\|study note]] | [[W05_ScalingRPA_CoE_LN_Slides_v1\|lecture slides]] | [[Week-5-Scaling-RPA-and-CoE]] |
+| Week 6 — Lab 2: Automate the Repeatable Part | [[W06_Lab2_Automate_StudyNote_v1\|study note]] | [[W06_Lab2_Automate_LN_Slides_v1\|lecture slides]] | [[Week-6-Lab-2-Automate]] |
+| Week 7 — From RPA to Intelligent Automation | [[W07_RPAtoIA_StudyNote_v1\|study note]] | — | [[Week-7-RPA-to-Intelligent-Automation]] |
 
 ## Sweetgreen capstone deliverables
 
@@ -65,7 +66,7 @@ Team Drive transcriptions of the Lab 2 files (text only) are under `raw/data/mar
 
 The vault's running glossary and cross-reference layer — kept current instead of re-defined inline every time something is used. All under `wiki/`; see "The vault as an LLM wiki" in [[ROBOT]] for how this layer is maintained.
 
-**Concepts** (`wiki/concepts/`): [[Control Point]] · [[Decision Point]] · [[Leverage Gap]] · [[Obliterate Then Automate]] · [[RPA Candidate Criteria]] · [[Four Lenses]] · [[Three Threads]] · [[Four Archetypes]]
+**Concepts** (`wiki/concepts/`): [[Center of Excellence]] · [[Control Point]] · [[Decision Point]] · [[Leverage Gap]] · [[Obliterate Then Automate]] · [[RPA Candidate Criteria]] · [[Four Lenses]] · [[Three Threads]] · [[Four Archetypes]]
 
 **Entities** (`wiki/entities/`): [[Sweetgreen]] · [[Thermo Fisher Scientific]] · [[Bailey Hydraulics]]
 
