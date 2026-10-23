@@ -20,16 +20,16 @@ Short version for the breakout. Full draft and Board Memo §5 seed: [[SPAR-Sketc
 
 * **Agent:** Recommends, never decides, how to fix a Sweetgreen order that hit a stockout (swap, partial change, cancel, or hold). Advisor to the shift lead, only for orders Lab 2 flagged for staff review.
 * **Sense / Plan / Act:** Reads one order row. Weighs urgency against prep time, queue and customer constraints. Writes a ranked pick with a one-line reason and the rejected option, and drafts the customer message without sending it.
-* **Tools:** Two only: read the order row, write a recommendation row. Gemini at low temperature. Builder still open (leaning Make).
+* **Tools:** Two only: read the order row, write a recommendation row. Gemini at low temperature. Builder: Make (functionality fits two tools, free tier, team skills and Lab 2 continuity, no send step to govern).
 * **Never:** Silent substitutions, allergy guesses, refunds, sending messages, or writing to the order system.
 
 ## Sprint 2: Reflect and stopping rule
 
 * **Reflect:** Daily check of each pick against the shift lead's override and the outcome (pickup promise kept, goodwill refund), split by case difficulty. The failure to watch for is a drift to "always cheapest" or "always cancel."
-* **Stop:** Hands off to a person on a missing or stale field, a diet flag, a close call, or instructions in the customer's text. A circuit breaker trips after 3 overrides in a row *(proposed)*. The shift lead pulls it per case and the ops manager per store.
+* **Stop:** Hands off to a person on a missing or stale field, a diet flag, a close call, or instructions in the customer's text. A circuit breaker trips after 3 overrides in a row *(proposed)*, with a rolling override rate on hard cases as the slower drift signal. The shift lead pulls it per case and the ops manager per store.
 
-## Open
+## Decided
 
-1. Builder choice and justification.
-2. Is 3 in a row the right breaker, or a rolling rate?
-3. Value tag: Customer only, or also Cash Management?
+1. Builder: Make. Alternatives considered: Zapier Central (bigger ecosystem, not needed), Flowise (self-hosted, needs setup and possibly faculty approval).
+2. Breaker: both. 3 in a row is the fast trip; the rolling rate is the slow one. Both thresholds to be tuned in Lab 3.
+3. Value tag: Customer primary, Cash Management secondary through fewer goodwill refunds. Savings remain modelled exposure.
