@@ -32,7 +32,8 @@ Also raw — Markdown at `raw/data/markdown/course-weeks/`, each converted from 
 | Week 4 — RPA: The Tactical Integration Layer | [[W04_RPA_StudyNote\|study note]] | [[W04_RPA_LN_Slides_v1\|lecture slides]] | [[Week-4-RPA]] |
 | Week 5 — Scaling RPA: Center of Excellence | [[W05_ScalingRPA_CoE_StudyNote_v2\|study note]] | [[W05_ScalingRPA_CoE_LN_Slides_v1\|lecture slides]] | [[Week-5-Scaling-RPA-and-CoE]] |
 | Week 6 — Lab 2: Automate the Repeatable Part | [[W06_Lab2_Automate_StudyNote_v1\|study note]] | [[W06_Lab2_Automate_LN_Slides_v1\|lecture slides]] | [[Week-6-Lab-2-Automate]] |
-| Week 7 — From RPA to Intelligent Automation | [[W07_RPAtoIA_StudyNote_v1\|study note]] | — | [[Week-7-RPA-to-Intelligent-Automation]] |
+| Week 7 — From RPA to Intelligent Automation | [[W07_RPAtoIA_StudyNote_v1\|study note]] | [[W07_RPAtoIA_LN_Slides_v1\|lecture slides]] | [[Week-7-RPA-to-Intelligent-Automation]] |
+| Week 8 — AI Agent Architecture: SPAR | [[W08_SPAR_StudyNote_v1\|study note]] | [[W08_SPAR_LN_Slides\|lecture slides]] | [[Week-8-SPAR-Agent-Architecture]] |
 
 ## Sweetgreen capstone deliverables
 
@@ -55,6 +56,8 @@ flowchart LR
 | Lab 1 process map, curveball, and data sandbox | Week 3 lab, sharpened Week 4 post-checkpoint | [[Lab1-Process-Map-Sweetgreen]] |
 | RPA-candidate scan (Board Memo §4) | Week 4 | [[RPA-Candidate-Scan-Sweetgreen]] |
 | Lab 2 automation build and tests (Board Memo §4) | Week 6 | [[Lab2-Automation-Sweetgreen]] |
+| Week 8 breakout: SPAR sketch for the D3 agent (Board Memo §5, slide S8) | Week 8 | [[SPAR-Sketch-Sweetgreen]] |
+| Week 8 full SPAR draft with Board Memo §5 seed | Week 8 | [[SPAR-Sketch-Sweetgreen-Full]] |
 | Midterm quiz answers (Quiz 1, due Oct 14) | Midterm | [[Midterm-Quiz-Answers]] |
 | Order-to-payment process map (swimlane diagram) | Week 3 | [[Order-and-Payment-Process-Map]] |
 | Discussion Forum 1: post and replies (Brightspace, due Oct 3) | Module 1 | [[Discussion-Forum-1-Post]], [[Discussion-Forum-1-Replies]] |
@@ -83,10 +86,10 @@ The vault's running glossary and cross-reference layer — kept current instead 
 - [x] Draft Lab 1 pre-work / reality brief (Sweetgreen)
 - [x] Sharpen Lab 1 deliverable post-checkpoint (specific control-point register, one-page diagnosis) and share the updated version with the professor before the Sep 25 class
 - [x] Draft the Week 4 RPA-candidate scan (Board Memo §4), completing all three in-class breakouts (map tagged end to end, the filtered scan, one candidate costed and governed)
-- [ ] Send Week 1 + Week 2 notes to the professor by email before the Sep 18 lab (`ec5743@nyu.edu`)
-- [ ] Set up/confirm free accounts: Miro or Lucidchart, Airtable or Google Sheets + Gemini
-- [ ] Make account, before Lab 2 (Week 6)
-- [ ] Team stack path declared by end of Week 3
+- [x] Send Week 1 + Week 2 notes to the professor by email before the Sep 18 lab (`ec5743@nyu.edu`)
+- [x] Set up/confirm free accounts: Miro or Lucidchart, Airtable or Google Sheets + Gemini
+- [x] Make account, before Lab 2 (Week 6)
+- [x] Team stack path declared by end of Week 3
 
 ## Vault conventions
 

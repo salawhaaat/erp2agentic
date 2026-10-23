@@ -6,10 +6,12 @@ description: Catch-up summary of Week 7 (Oct 16): where rules run out, ML and in
 sources:
   - id: study-note
     resource: raw/data/markdown/course-weeks/w7/W07_RPAtoIA_StudyNote_v1.md
+  - id: lecture-slides
+    resource: raw/data/markdown/course-weeks/w7/W07_RPAtoIA_LN_Slides_v1.md
 ---
 # Week 7: From RPA to Intelligent Automation
 
-Module 3, Intelligent Automation + AI Agents, Friday Oct 16, 2026. Reading: [[W07_RPAtoIA_StudyNote_v1|study note]] (no lecture slides ingested yet). Previous: [[Week-6-Lab-2-Automate]]. Next: Week 8, the SPAR agent framework (not yet ingested).
+Module 3, Intelligent Automation + AI Agents, Friday Oct 16, 2026. Reading: [[W07_RPAtoIA_StudyNote_v1|study note]], [[W07_RPAtoIA_LN_Slides_v1|lecture slides]]. Previous: [[Week-6-Lab-2-Automate]]. Next: [[Week-8-SPAR-Agent-Architecture]].
 
 ## The one-paragraph version
 
