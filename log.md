@@ -7,6 +7,15 @@ tags: [log]
 
 OKF-style: date-grouped, newest date first. Backfilled from git history and session context on 2026-09-25 when this log was introduced and later reformatted to match [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md); entries before 2026-09-25 are reconstructed from commit messages, not written live.
 
+## 2026-10-28
+
+* **Deliverable**: Extended the Lab 2 D2 Make scenario with a Gemini recovery suggestion on STAFF REVIEW cases and a kill switch. New modules: Kill switch check (reads the `GLOBAL` row of `Case State`), a Router, Gemini, Add AI suggestion, and an AI paused handoff row. Documented in [[Lab2-D2-Scenario-Diagram]]; importable export saved as `wiki/project/week8/Lab2-D2-Availability-Check.blueprint.v5.json` (one email redacted).
+* **Deliverable**: Kill switch rule built in the sheet, not in Make: 3 REJECT decisions in `Staff Feedback` within 24 hours turn `Case State!C2` to OFF and Gemini stops being called. Adjusted from the SPAR sketch's "3 overrides in a row", noted in the diagram note.
+* **Fix**: The kill switch formula counted `REJECTED` while the `Staff Feedback` dropdown only allows `REJECT`, so it could never trip. Formula and the module 10 text corrected. Tested end to end with three test rows (B2 = 3, C2 = OFF), then removed.
+* **Fix**: Gemini prompt tuned over three versions. v3 and v4 returned HOLD for both cases (v3 invented a diet concern, v4 read availability 0 as a HOLD reason). v5 gave SWAP for B1 and HOLD for B2, with confidence capped at 70 and 90.
+* **Creation**: Added an `AI Suggestions` tab (QUERY over `AutoActions`) in the Lab 2 sandbox sheet to show only the AI rows. New columns `decided_at` (`Staff Feedback`) and `ai_draft_message` (`AutoActions`).
+* **Lint**: Left open: 82 test rows dated 2026-10-28 in `AutoActions`, only two cases checked, duplicate prevention still future work. Listed under "Open items" in the diagram note. Work paused for the day.
+
 ## 2026-10-23
 
 * **Ingest**: Added `W08_SPAR_LN_Slides.pdf` and `W08_SPAR_StudyNote_v1.pdf` (Week 8, AI Agent Architecture: the SPAR Framework) as paired PDF + Markdown under `raw/data/{pdf,markdown}/course-weeks/w8/`. Converted with `pdftotext -layout` (`markitdown` not installed), study-note page footers stripped. Not hand-checked against the PDF.

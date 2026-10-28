@@ -58,6 +58,7 @@ flowchart LR
 | Lab 2 automation build and tests (Board Memo §4) | Week 6 | [[Lab2-Automation-Sweetgreen]] |
 | Week 8 breakout: SPAR sketch for the D3 agent (Board Memo §5, slide S8) | Week 8 | [[SPAR-Sketch-Sweetgreen]] |
 | Week 8 full SPAR draft with Board Memo §5 seed | Week 8 | [[SPAR-Sketch-Sweetgreen-Full]] |
+| Lab 2 D2 scenario with AI suggestion and kill switch (Make, v5 export) | Week 8 | [[Lab2-D2-Scenario-Diagram]], `wiki/project/week8/Lab2-D2-Availability-Check.blueprint.v5.json` |
 | Midterm quiz answers (Quiz 1, due Oct 14) | Midterm | [[Midterm-Quiz-Answers]] |
 | Order-to-payment process map (swimlane diagram) | Week 3 | [[Order-and-Payment-Process-Map]] |
 | Discussion Forum 1: post and replies (Brightspace, due Oct 3) | Module 1 | [[Discussion-Forum-1-Post]], [[Discussion-Forum-1-Replies]] |
