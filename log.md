@@ -7,8 +7,17 @@ tags: [log]
 
 OKF-style: date-grouped, newest date first. Backfilled from git history and session context on 2026-09-25 when this log was introduced and later reformatted to match [Open Knowledge Format v0.2](https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md); entries before 2026-09-25 are reconstructed from commit messages, not written live.
 
+## 2026-10-30
+
+* **Ingest**: Added `W09_Lab3_Agent_LN_Slides_v1.pdf` and `W09_Lab3_Agent_StudyNote_pre-Lab.pdf` (Week 9, Lab 3: build the agent, then govern it) as paired PDF + Markdown under `raw/data/{pdf,markdown}/course-weeks/w9/`. Converted with `pdftotext -layout` (`markitdown` not installed), page footers stripped. Not hand-checked against the PDF.
+* **Creation**: `wiki/weeks/Week-9-Lab-3-Governed-Agent.md` (breakout task, clock, presentation plan). Week 8 summary now links forward; `index.md` has the Week 9 row.
+* **Deliverable**: Drafted the Lab 3 redesign of the D2/D3 recovery workflow with the customer in the loop (four paths A to D, refund queue, customer reply handler) as [[Lab3-Governed-Recovery-Agent]], plus two generated Make blueprints in `wiki/project/week9/` (not imported or tested). Boundary loosened from the Week 8 sketch: customer messages and swaps are applied only after a matching customer reply, refunds are queued not executed, allergies stay human. Sheet changes were prepared as a Claude for Sheets prompt.
+* **Deliverable**: v7 of the Lab 3 workflow: Gemini picks the replacement from a sheet-built candidate list with a code guard, live stock re-check before a swap, a follow-up sweeper scenario (offer timeout, restock check) and an auto-approve refund cap. Three blueprints and the customer journey diagram in `wiki/project/week9/`. Not run yet.
+* **Deliverable**: [[Lab3-Team-Handoff]] (context, shared contract, six parallel workstreams, break table) and [[Lab3-Sheet-Setup-Prompts]] (both Claude for Sheets prompts saved in the vault). Replaced the earlier journey note with [[Lab3-Final-Flow]]. Deleted the untracked v6 blueprints, superseded by v7.
+
 ## 2026-10-28
 
+* **Deliverable**: Drafted Discussion Forum 2 post (where the line sits between safe RPA rules and exceptions, argued from the Lab 2 build and break, with a Center of Excellence close) as [[Discussion-Forum-2-Post]]. 346 words, humanizer pass applied, no em dashes. Replies still to write.
 * **Deliverable**: Extended the Lab 2 D2 Make scenario with a Gemini recovery suggestion on STAFF REVIEW cases and a kill switch. New modules: Kill switch check (reads the `GLOBAL` row of `Case State`), a Router, Gemini, Add AI suggestion, and an AI paused handoff row. Documented in [[Lab2-D2-Scenario-Diagram]]; importable export saved as `wiki/project/week8/Lab2-D2-Availability-Check.blueprint.v5.json` (one email redacted).
 * **Deliverable**: Kill switch rule built in the sheet, not in Make: 3 REJECT decisions in `Staff Feedback` within 24 hours turn `Case State!C2` to OFF and Gemini stops being called. Adjusted from the SPAR sketch's "3 overrides in a row", noted in the diagram note.
 * **Fix**: The kill switch formula counted `REJECTED` while the `Staff Feedback` dropdown only allows `REJECT`, so it could never trip. Formula and the module 10 text corrected. Tested end to end with three test rows (B2 = 3, C2 = OFF), then removed.

@@ -1,0 +1,352 @@
+{
+  "name": "Sweetgreen Lab 3 - Follow-up Sweeper v7",
+  "flow": [
+    {
+      "id": 1,
+      "module": "google-sheets:filterRows",
+      "version": 2,
+      "parameters": {
+        "__IMTCONN__": 11537819
+      },
+      "mapper": {
+        "from": "share",
+        "limit": "10",
+        "filter": [
+          [
+            {
+              "a": "C",
+              "o": "exist"
+            }
+          ]
+        ],
+        "sheetId": "Follow-up Queue",
+        "sortOrder": "asc",
+        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+        "tableFirstRow": "A1:Z1",
+        "includesHeaders": true,
+        "valueRenderOption": "FORMATTED_VALUE",
+        "dateTimeRenderOption": "FORMATTED_STRING"
+      },
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 300,
+          "name": "Due follow-ups"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "google-sheets:filterRows",
+      "version": 2,
+      "parameters": {
+        "__IMTCONN__": 11537819
+      },
+      "mapper": {
+        "from": "share",
+        "limit": "1",
+        "filter": [
+          [
+            {
+              "a": "A",
+              "b": "GLOBAL",
+              "o": "text:equal"
+            }
+          ]
+        ],
+        "sheetId": "Case State",
+        "sortOrder": "asc",
+        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+        "tableFirstRow": "A1:Z1",
+        "includesHeaders": true,
+        "valueRenderOption": "FORMATTED_VALUE",
+        "dateTimeRenderOption": "FORMATTED_STRING"
+      },
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 300,
+          "name": "Read refund cap"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "parameters": {},
+      "mapper": null,
+      "metadata": {
+        "designer": {
+          "x": 600,
+          "y": 300
+        }
+      },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 4,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "0": "{{1.`0`}}",
+                  "1": "{{1.`1`}}",
+                  "2": "Offer expired with no customer reply. Agent queued the request only; code applies the cap.",
+                  "3": "{{now}}",
+                  "4": "{{if({{1.`4`}} <= {{2.`8`}}; \"AUTO_APPROVED\"; \"PENDING_FINANCE\")}}",
+                  "5": "{{if({{1.`4`}} <= {{2.`8`}}; \"RULE_CAP\"; \"\")}}",
+                  "6": "{{1.`4`}}"
+                },
+                "sheetId": "Refund Queue",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1200,
+                  "y": 0,
+                  "name": "Queue refund (no reply)"
+                }
+              },
+              "filter": {
+                "name": "TIMEOUT - offer expired, no reply",
+                "conditions": [
+                  [
+                    {
+                      "a": "{{1.`2`}}",
+                      "o": "text:equal",
+                      "b": "TIMEOUT"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": 5,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "0": "LAB3_01",
+                  "1": "{{1.`0`}}",
+                  "2": "{{1.`1`}}",
+                  "3": "",
+                  "4": "",
+                  "5": "NO_REPLY_REFUND_QUEUED",
+                  "6": "Offer timed out. Refund request queued, cap applied by code.",
+                  "7": "",
+                  "8": "",
+                  "9": "lab3-agent-v7",
+                  "10": "{{now}}",
+                  "15": "",
+                  "19": "{{if(1.`4` <= 2.`8`; \"REFUND_AUTO_APPROVED_UNDER_CAP\"; \"REFUND_PENDING_FINANCE\")}}",
+                  "18": "Your offer has expired and we could not hold your order. We have asked our team to refund you, and nothing else is needed."
+                },
+                "sheetId": "AutoActions",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1500,
+                  "y": 0,
+                  "name": "No reply, refund queued"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 7,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "0": "LAB3_01",
+                  "1": "{{1.`0`}}",
+                  "2": "{{1.`1`}}",
+                  "3": "",
+                  "4": "",
+                  "5": "RESTOCK_CONFIRMED",
+                  "6": "Restock check at the promised time: item is back in stock. Order goes to the kitchen as originally placed.",
+                  "7": "",
+                  "8": "",
+                  "9": "lab3-agent-v7",
+                  "10": "{{now}}",
+                  "19": "RESTOCK_CONFIRMED_ORIGINAL_ORDER",
+                  "18": "Good news: your item is back in stock and your original order is being prepared."
+                },
+                "sheetId": "AutoActions",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1200,
+                  "y": 300,
+                  "name": "Restock confirmed"
+                }
+              },
+              "filter": {
+                "name": "RESTOCK_DUE and item is back",
+                "conditions": [
+                  [
+                    {
+                      "a": "{{1.`2`}}",
+                      "o": "text:equal",
+                      "b": "RESTOCK_DUE"
+                    },
+                    {
+                      "a": "{{1.`3`}}",
+                      "o": "text:equal",
+                      "b": "1"
+                    }
+                  ]
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 8,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "0": "{{1.`0`}}",
+                  "1": "{{1.`1`}}",
+                  "2": "Restock check failed: item still unavailable at the promised time. Agent queued the request only; code applies the cap.",
+                  "3": "{{now}}",
+                  "4": "{{if({{1.`4`}} <= {{2.`8`}}; \"AUTO_APPROVED\"; \"PENDING_FINANCE\")}}",
+                  "5": "{{if({{1.`4`}} <= {{2.`8`}}; \"RULE_CAP\"; \"\")}}",
+                  "6": "{{1.`4`}}"
+                },
+                "sheetId": "Refund Queue",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1200,
+                  "y": 600,
+                  "name": "Queue refund (restock late)"
+                }
+              },
+              "filter": {
+                "name": "RESTOCK_DUE and still out",
+                "conditions": [
+                  [
+                    {
+                      "a": "{{1.`2`}}",
+                      "o": "text:equal",
+                      "b": "RESTOCK_DUE"
+                    },
+                    {
+                      "a": "{{1.`3`}}",
+                      "o": "text:notequal",
+                      "b": "1"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": 9,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "0": "LAB3_01",
+                  "1": "{{1.`0`}}",
+                  "2": "{{1.`1`}}",
+                  "3": "",
+                  "4": "",
+                  "5": "RESTOCK_LATE_REFUND_QUEUED",
+                  "6": "Restock check at the promised time: still out of stock. Refund request queued, cap applied by code.",
+                  "7": "",
+                  "8": "",
+                  "9": "lab3-agent-v7",
+                  "10": "{{now}}",
+                  "19": "{{if(1.`4` <= 2.`8`; \"REFUND_AUTO_APPROVED_UNDER_CAP\"; \"REFUND_PENDING_FINANCE\")}}",
+                  "18": "Sorry, the item is still out of stock and we cannot make your deadline. We have asked our team to refund you, and nothing else is needed."
+                },
+                "sheetId": "AutoActions",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1500,
+                  "y": 600,
+                  "name": "Restock late, refund queued"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "us2.make.com",
+    "notes": []
+  }
+}

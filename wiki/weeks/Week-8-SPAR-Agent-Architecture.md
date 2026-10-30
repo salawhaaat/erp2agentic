@@ -11,7 +11,7 @@ sources:
 ---
 # Week 8: AI Agent Architecture, the SPAR Framework
 
-Module 3, Friday Oct 23, 2026. Reading: [[W08_SPAR_StudyNote_v1|study note]], [[W08_SPAR_LN_Slides|lecture slides]]. Previous: [[Week-7-RPA-to-Intelligent-Automation]]. Next: Week 9, Lab 3, building a governed agent (not yet ingested).
+Module 3, Friday Oct 23, 2026. Reading: [[W08_SPAR_StudyNote_v1|study note]], [[W08_SPAR_LN_Slides|lecture slides]]. Previous: [[Week-7-RPA-to-Intelligent-Automation]]. Next: [[Week-9-Lab-3-Governed-Agent]], Lab 3, building a governed agent.
 
 ## The one-paragraph version
 

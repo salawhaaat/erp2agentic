@@ -1,0 +1,605 @@
+{
+  "name": "Sweetgreen Lab 3 - Customer Reply Handler v7",
+  "flow": [
+    {
+      "id": 1,
+      "module": "google-sheets:filterRows",
+      "version": 2,
+      "parameters": {
+        "__IMTCONN__": 11537819
+      },
+      "mapper": {
+        "from": "share",
+        "limit": "10",
+        "filter": [
+          [
+            {
+              "a": "G",
+              "b": "NO",
+              "o": "text:equal"
+            },
+            {
+              "a": "D",
+              "o": "exist"
+            }
+          ]
+        ],
+        "sheetId": "Customer Response",
+        "sortOrder": "asc",
+        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+        "tableFirstRow": "A1:Z1",
+        "includesHeaders": true,
+        "valueRenderOption": "FORMATTED_VALUE",
+        "dateTimeRenderOption": "FORMATTED_STRING"
+      },
+      "metadata": {
+        "designer": {
+          "x": 0,
+          "y": 300,
+          "name": "New customer replies"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "module": "google-sheets:filterRows",
+      "version": 2,
+      "parameters": {
+        "__IMTCONN__": 11537819
+      },
+      "mapper": {
+        "from": "share",
+        "limit": "1",
+        "filter": [
+          [
+            {
+              "a": "B",
+              "b": "{{1.`0`}}",
+              "o": "text:equal"
+            },
+            {
+              "a": "F",
+              "b": "CUSTOMER_OFFER",
+              "o": "text:equal"
+            }
+          ]
+        ],
+        "sheetId": "AutoActions",
+        "sortOrder": "asc",
+        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+        "tableFirstRow": "A1:Z1",
+        "includesHeaders": true,
+        "valueRenderOption": "FORMATTED_VALUE",
+        "dateTimeRenderOption": "FORMATTED_STRING"
+      },
+      "metadata": {
+        "designer": {
+          "x": 300,
+          "y": 300,
+          "name": "Find the offer we made"
+        }
+      }
+    },
+    {
+      "id": 20,
+      "module": "google-sheets:filterRows",
+      "version": 2,
+      "parameters": {
+        "__IMTCONN__": 11537819
+      },
+      "mapper": {
+        "from": "share",
+        "limit": "1",
+        "filter": [
+          [
+            {
+              "a": "A",
+              "b": "GLOBAL",
+              "o": "text:equal"
+            }
+          ]
+        ],
+        "sheetId": "Case State",
+        "sortOrder": "asc",
+        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+        "tableFirstRow": "A1:Z1",
+        "includesHeaders": true,
+        "valueRenderOption": "FORMATTED_VALUE",
+        "dateTimeRenderOption": "FORMATTED_STRING"
+      },
+      "metadata": {
+        "designer": {
+          "x": 450,
+          "y": 300,
+          "name": "Read refund cap"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "module": "builtin:BasicRouter",
+      "version": 1,
+      "parameters": {
+        "else": 1
+      },
+      "mapper": null,
+      "metadata": {
+        "designer": {
+          "x": 600,
+          "y": 300
+        }
+      },
+      "routes": [
+        {
+          "flow": [
+            {
+              "id": 5,
+              "module": "google-sheets:addRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "0": "LAB3_01",
+                  "1": "{{1.`0`}}",
+                  "2": "{{1.`1`}}",
+                  "3": "",
+                  "4": "",
+                  "5": "STAFF_ESCALATION",
+                  "6": "Customer reply could not be applied safely (no matching offer, expired offer, unrecognised choice, or instruction-like text). Owner: shift lead.",
+                  "7": "",
+                  "8": "",
+                  "9": "lab3-agent-v7",
+                  "10": "{{now}}",
+                  "15": "D",
+                  "19": "STAFF_REVIEW"
+                },
+                "sheetId": "AutoActions",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false
+              },
+              "metadata": {
+                "designer": {
+                  "x": 900,
+                  "y": -300,
+                  "name": "Reply to staff"
+                }
+              },
+              "filter": {
+                "name": "STAFF - no valid offer, expired, odd text, or swap item no longer in stock",
+                "conditions": [
+                  [
+                    {
+                      "a": "{{2.`1`}}",
+                      "o": "notexist"
+                    }
+                  ],
+                  [
+                    {
+                      "a": "{{now}}",
+                      "o": "date:greater",
+                      "b": "{{2.`17`}}"
+                    }
+                  ],
+                  [
+                    {
+                      "a": "{{1.`5`}}",
+                      "o": "text:pattern:ci",
+                      "b": "(ignore|disregard|override|always (approve|choose|refund)|refund me|system prompt|instruction)"
+                    }
+                  ],
+                  [
+                    {
+                      "a": "{{1.`3`}}",
+                      "o": "text:notpattern",
+                      "b": "^(ACCEPT_SWAP|WAIT_RESTOCK|DECLINE|NO_REPLY)$"
+                    }
+                  ],
+                  [
+                    {
+                      "a": "{{1.`3`}}",
+                      "o": "text:equal",
+                      "b": "ACCEPT_SWAP"
+                    },
+                    {
+                      "a": "{{2.`16`}}",
+                      "o": "text:notpattern",
+                      "b": "SWAP|BOTH"
+                    }
+                  ],
+                  [
+                    {
+                      "a": "{{1.`3`}}",
+                      "o": "text:equal",
+                      "b": "WAIT_RESTOCK"
+                    },
+                    {
+                      "a": "{{2.`16`}}",
+                      "o": "text:notpattern",
+                      "b": "BOTH"
+                    }
+                  ],
+                  [
+                    {
+                      "a": "{{1.`3`}}",
+                      "o": "text:equal",
+                      "b": "ACCEPT_SWAP"
+                    },
+                    {
+                      "a": "{{1.`8`}}",
+                      "o": "number:notequal",
+                      "b": "1"
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "id": 6,
+              "module": "google-sheets:updateRow",
+              "version": 2,
+              "parameters": {
+                "__IMTCONN__": 11537819
+              },
+              "mapper": {
+                "mode": "map",
+                "values": {
+                  "6": "YES"
+                },
+                "sheetId": "Customer Response",
+                "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                "tableFirstRow": "A1:Z1",
+                "insertDataOption": "INSERT_ROWS",
+                "valueInputOption": "USER_ENTERED",
+                "insertUnformatted": false,
+                "rowNumber": "{{1.__ROW_NUMBER__}}"
+              },
+              "metadata": {
+                "designer": {
+                  "x": 1200,
+                  "y": -300,
+                  "name": "Mark reply processed"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "flow": [
+            {
+              "id": 14,
+              "module": "builtin:BasicRouter",
+              "version": 1,
+              "parameters": {
+                "else": 1
+              },
+              "mapper": null,
+              "metadata": {
+                "designer": {
+                  "x": 750,
+                  "y": 300
+                }
+              },
+              "filter": {
+                "name": "Not staff",
+                "conditions": []
+              },
+              "routes": [
+                {
+                  "flow": [
+                    {
+                      "id": 7,
+                      "module": "google-sheets:addRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "0": "LAB3_01",
+                          "1": "{{1.`0`}}",
+                          "2": "{{1.`1`}}",
+                          "3": "",
+                          "4": "",
+                          "5": "SWAP_CONFIRMED",
+                          "6": "Customer accepted an issued, unexpired offer and the replacement was re-checked in stock at this moment ({{1.`7`}}). Row is the change request for the kitchen; the agent does not write to the order system.",
+                          "7": "",
+                          "8": "",
+                          "9": "lab3-agent-v7",
+                          "10": "{{now}}",
+                          "15": "{{2.`15`}}",
+                          "19": "SWAP_CONFIRMED_BY_CUSTOMER"
+                        },
+                        "sheetId": "AutoActions",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 900,
+                          "y": 0,
+                          "name": "Swap confirmed (stock re-checked)"
+                        }
+                      },
+                      "filter": {
+                        "name": "ACCEPT_SWAP - offer exists and includes a swap",
+                        "conditions": [
+                          [
+                            {
+                              "a": "{{1.`3`}}",
+                              "o": "text:equal",
+                              "b": "ACCEPT_SWAP"
+                            },
+                            {
+                              "a": "{{2.`16`}}",
+                              "o": "text:pattern",
+                              "b": "SWAP|BOTH"
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "id": 8,
+                      "module": "google-sheets:updateRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "6": "YES"
+                        },
+                        "sheetId": "Customer Response",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false,
+                        "rowNumber": "{{1.__ROW_NUMBER__}}"
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 1200,
+                          "y": 0,
+                          "name": "Mark reply processed"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "flow": [
+                    {
+                      "id": 9,
+                      "module": "google-sheets:addRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "0": "LAB3_01",
+                          "1": "{{1.`0`}}",
+                          "2": "{{1.`1`}}",
+                          "3": "",
+                          "4": "",
+                          "5": "WAIT_CONFIRMED",
+                          "6": "Customer chose to wait for restock inside the deadline.",
+                          "7": "",
+                          "8": "",
+                          "9": "lab3-agent-v7",
+                          "10": "{{now}}",
+                          "15": "{{2.`15`}}",
+                          "19": "WAIT_CONFIRMED_BY_CUSTOMER"
+                        },
+                        "sheetId": "AutoActions",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 900,
+                          "y": 300,
+                          "name": "Wait confirmed"
+                        }
+                      },
+                      "filter": {
+                        "name": "WAIT_RESTOCK - offer includes waiting",
+                        "conditions": [
+                          [
+                            {
+                              "a": "{{1.`3`}}",
+                              "o": "text:equal",
+                              "b": "WAIT_RESTOCK"
+                            },
+                            {
+                              "a": "{{2.`16`}}",
+                              "o": "text:pattern",
+                              "b": "BOTH"
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    {
+                      "id": 10,
+                      "module": "google-sheets:updateRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "6": "YES"
+                        },
+                        "sheetId": "Customer Response",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false,
+                        "rowNumber": "{{1.__ROW_NUMBER__}}"
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 1200,
+                          "y": 300,
+                          "name": "Mark reply processed"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "flow": [
+                    {
+                      "id": 11,
+                      "module": "google-sheets:addRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "0": "{{1.`0`}}",
+                          "1": "{{1.`1`}}",
+                          "2": "Customer declined or did not reply ({{1.`3`}}). Agent queued the request only; code applies the cap.",
+                          "3": "{{now}}",
+                          "4": "{{if({{1.`9`}} <= {{20.`8`}}; \"AUTO_APPROVED\"; \"PENDING_FINANCE\")}}",
+                          "5": "{{if({{1.`9`}} <= {{20.`8`}}; \"RULE_CAP\"; \"\")}}",
+                          "6": "{{1.`9`}}"
+                        },
+                        "sheetId": "Refund Queue",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 900,
+                          "y": 600,
+                          "name": "Queue refund"
+                        }
+                      },
+                      "filter": {
+                        "name": "DECLINE or NO_REPLY - refund faster",
+                        "conditions": []
+                      }
+                    },
+                    {
+                      "id": 12,
+                      "module": "google-sheets:addRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "0": "LAB3_01",
+                          "1": "{{1.`0`}}",
+                          "2": "{{1.`1`}}",
+                          "3": "",
+                          "4": "",
+                          "5": "REFUND_QUEUED",
+                          "6": "Customer did not take an in-time option. Refund request queued for finance approval.",
+                          "7": "",
+                          "8": "",
+                          "9": "lab3-agent-v7",
+                          "10": "{{now}}",
+                          "15": "{{2.`15`}}",
+                          "19": "{{if(1.`9` <= 20.`8`; \"REFUND_AUTO_APPROVED_UNDER_CAP\"; \"REFUND_PENDING_FINANCE\")}}"
+                        },
+                        "sheetId": "AutoActions",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 1200,
+                          "y": 600,
+                          "name": "Refund queued row"
+                        }
+                      }
+                    },
+                    {
+                      "id": 13,
+                      "module": "google-sheets:updateRow",
+                      "version": 2,
+                      "parameters": {
+                        "__IMTCONN__": 11537819
+                      },
+                      "mapper": {
+                        "mode": "map",
+                        "values": {
+                          "6": "YES"
+                        },
+                        "sheetId": "Customer Response",
+                        "spreadsheetId": "1chr9ntqh-wlb9ISlzznErcPFoL6J1Jox-j0NSWImkP0",
+                        "tableFirstRow": "A1:Z1",
+                        "insertDataOption": "INSERT_ROWS",
+                        "valueInputOption": "USER_ENTERED",
+                        "insertUnformatted": false,
+                        "rowNumber": "{{1.__ROW_NUMBER__}}"
+                      },
+                      "metadata": {
+                        "designer": {
+                          "x": 1500,
+                          "y": 600,
+                          "name": "Mark reply processed"
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "instant": false,
+    "version": 1,
+    "scenario": {
+      "roundtrips": 1,
+      "maxErrors": 3,
+      "autoCommit": true,
+      "autoCommitTriggerLast": true,
+      "sequential": false,
+      "slots": null,
+      "confidential": false,
+      "dataloss": false,
+      "dlq": false,
+      "freshVariables": false
+    },
+    "designer": {
+      "orphans": []
+    },
+    "zone": "us2.make.com",
+    "notes": []
+  }
+}

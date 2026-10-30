@@ -34,6 +34,7 @@ Also raw — Markdown at `raw/data/markdown/course-weeks/`, each converted from 
 | Week 6 — Lab 2: Automate the Repeatable Part | [[W06_Lab2_Automate_StudyNote_v1\|study note]] | [[W06_Lab2_Automate_LN_Slides_v1\|lecture slides]] | [[Week-6-Lab-2-Automate]] |
 | Week 7 — From RPA to Intelligent Automation | [[W07_RPAtoIA_StudyNote_v1\|study note]] | [[W07_RPAtoIA_LN_Slides_v1\|lecture slides]] | [[Week-7-RPA-to-Intelligent-Automation]] |
 | Week 8 — AI Agent Architecture: SPAR | [[W08_SPAR_StudyNote_v1\|study note]] | [[W08_SPAR_LN_Slides\|lecture slides]] | [[Week-8-SPAR-Agent-Architecture]] |
+| Week 9 — Lab 3: Build the Agent, Then Govern It | [[W09_Lab3_Agent_StudyNote_pre-Lab\|study note]] | [[W09_Lab3_Agent_LN_Slides_v1\|lecture slides]] | [[Week-9-Lab-3-Governed-Agent]] |
 
 ## Sweetgreen capstone deliverables
 
@@ -59,9 +60,12 @@ flowchart LR
 | Week 8 breakout: SPAR sketch for the D3 agent (Board Memo §5, slide S8) | Week 8 | [[SPAR-Sketch-Sweetgreen]] |
 | Week 8 full SPAR draft with Board Memo §5 seed | Week 8 | [[SPAR-Sketch-Sweetgreen-Full]] |
 | Lab 2 D2 scenario with AI suggestion and kill switch (Make, v5 export) | Week 8 | [[Lab2-D2-Scenario-Diagram]], `wiki/project/week8/Lab2-D2-Availability-Check.blueprint.v5.json` |
+| Lab 3 governed recovery agent, customer in the loop (Make v6 blueprints, untested) | Week 9 | [[Lab3-Governed-Recovery-Agent]], `wiki/project/week9/` |
+| Lab 3 team handoff (workstreams, shared contract) and sheet setup prompts | Week 9 | [[Lab3-Team-Handoff]], [[Lab3-Sheet-Setup-Prompts]], [[Lab3-Final-Flow]] |
 | Midterm quiz answers (Quiz 1, due Oct 14) | Midterm | [[Midterm-Quiz-Answers]] |
 | Order-to-payment process map (swimlane diagram) | Week 3 | [[Order-and-Payment-Process-Map]] |
 | Discussion Forum 1: post and replies (Brightspace, due Oct 3) | Module 1 | [[Discussion-Forum-1-Post]], [[Discussion-Forum-1-Replies]] |
+| Discussion Forum 2: post on the RPA safe-automation line (due Oct 28, replies Oct 31) | Module 2 | [[Discussion-Forum-2-Post]] |
 | Board presentation deck (living, filled in lab by lab) | Ongoing | `wiki/project/shared/Board-Presentation-Sweetgreen.pptx` |
 | Lab 1 presentation (standalone, to present in class) | Week 3 lab | `wiki/project/week3/Lab1-Presentation-Sweetgreen.pptx` |
 | Week 4 presentation (standalone, to send teammates) | Week 4 | `wiki/project/week4/Week4-Presentation-Sweetgreen.pptx` / `.pdf` |
